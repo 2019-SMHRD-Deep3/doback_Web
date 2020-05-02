@@ -50,7 +50,7 @@ public class MemberDAO {
 		try {
 			getConnection();
 
-			String sql = "insert into member values(?,?,?,?)";
+			String sql = "insert into member values(id_seq.nextval,?,?,?,?)";
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, dto.getId());
 			psmt.setString(2, dto.getPw());

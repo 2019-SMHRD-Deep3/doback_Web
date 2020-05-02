@@ -1,11 +1,13 @@
-drop table member;
-create table member(
-	id varchar2(20),
-	pw varchar2(20),
-	email varchar2(20),
-	phone varchar2(20)
+DROP TABLE member;
+DROP SEQUENCE id_seq;
+CREATE SEQUENCE id_seq START WITH 1 INCREMENT BY 1 MAXVALUE 1000 NOCYCLE;
+CREATE TABLE member(
+	idnum number CONSTRAINT member_pk_id PRIMARY KEY,
+	id varchar2(20) CONSTRAINT member_nn_id NOT NULL CONSTRAINT member_uk_id UNIQUE,
+	pw varchar2(20) CONSTRAINT member_nn_pw NOT NULL,
+	email varchar2(20) CONSTRAINT member_nn_email NOT NULL,
+	phone varchar2(20) CONSTRAINT member_nn_phone NOT NULL
 )
-insert into member values('test', '0000', 'test@naver.com', '010-0000-0000');
-select * from member
-
-delete from member where id = 'aaa';
+INSERT INTO member VALUES(id_seq.nextval, 'test', '0000', 'test@naver.com', '010-0000-0000');
+DELETE FROM member;
+SELECT * FROM member
