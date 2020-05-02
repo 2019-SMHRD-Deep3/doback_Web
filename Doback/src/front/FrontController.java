@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import controller.InsertAnalysisResult;
 import controller.JoinCon;
 import controller.LoginCon;
 
@@ -21,6 +22,7 @@ public class FrontController extends HttpServlet {
 	private void putData() {
 		map.put("JoinService.do", new JoinCon());
 		map.put("LoginService.do", new LoginCon());
+		map.put("InsertAnalysis.do", new InsertAnalysisResult());
 		
 	}
 	

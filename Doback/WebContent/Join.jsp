@@ -63,6 +63,10 @@ header a.login {
 	padding-top: 50px;
 	padding-bottom: 150px;
 }
+#gender_check{
+
+	
+}
 </style>
 </head>
 <body>
@@ -130,7 +134,7 @@ header a.login {
 									<i class="fa fa-lock"></i><input type="email" name="email"
 										class="" placeholder="이메일 입력" required>
 								</div>
-								<div class="form-input-group">
+								<div class="form-input-group" id="gender_check">
 									<i class="fa fa-lock"></i><input type="radio" name="gender"
 										value="man" checked>남 <input type="radio"
 										name="gender" value="woman" checked>여

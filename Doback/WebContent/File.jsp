@@ -93,6 +93,7 @@
 <script src="http://code.jquery.com/jquery-latest.js"></script>
  
 <script type="text/javascript">
+	
 
 
  
@@ -252,8 +253,8 @@
             }
             
             $.ajax({
-                url:"업로드 경로",
-                data:formData,
+                url:"FileHouse.jsp",
+                data:formData,             
                 type:'POST',
                 enctype:'multipart/form-data',
                 processData:false,
