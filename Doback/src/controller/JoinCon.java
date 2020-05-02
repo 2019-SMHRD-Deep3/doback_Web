@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import Front.Icommand;
+import front.Icommand;
 import model.MemberDAO;
 import model.MemberDTO;
 
