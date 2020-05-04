@@ -64,9 +64,18 @@ header a.login {
 	padding-bottom: 150px;
 }
 #gender_check{
+    padding-left: 50px;
+    width: 40px;
+    height: 40%;
+    border-radius: 6px;
+    border: none;
+    margin: 15px 0 0;
+    margin-top: 1px \9;
+    line-height: normal;
 
-	
 }
+input[type=radio]{-webkit-box-sizing:border-box;
+-moz-box-sizing:border-box;box-sizing:border-box;padding:0}
 </style>
 </head>
 <body>
@@ -134,10 +143,11 @@ header a.login {
 									<i class="fa fa-lock"></i><input type="email" name="email"
 										class="" placeholder="이메일 입력" required>
 								</div>
-								<div class="form-input-group" id="gender_check">
-									<i class="fa fa-lock"></i><input type="radio" name="gender"
-										value="man" checked>남 <input type="radio"
-										name="gender" value="woman" checked>여
+								<div class="form-input-group" >
+									<i class="fa fa-lock"></i>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<input type="radio" name="gender" value="man" checked id="gender_check">남&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<input type="radio"	name="gender" value="woman" checked id="gender_check">여
 								</div>
 								<button type="submit" class="btn-fill sign-up-btn">회원가입</button>
 							</form>
