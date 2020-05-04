@@ -102,7 +102,7 @@
                 <div class="col-md-5 col-md-offset-7">
                     <div class="feature-list">
                         <h3>나의 회화 분석 이력</h3>
-                        <p>Present your product, start up, or portfolio in a beautifully modern way. Turn your visitors in to clients.</p>
+                        <p>당신의 학습 이력을 확인해보세요:)</p>
                         <ul class="features-stack">
                             <li class="feature-item">
                                 <div class="feature-icon">

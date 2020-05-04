@@ -91,6 +91,10 @@ header a.Study {
 	border: 1px solid #888;
 	width: 30%; /* Could be more or less, depending on screen size */
 }
+#uploadBtn{
+text-align: center;
+ }
+
 </style>
 </head>
 
@@ -287,34 +291,38 @@ header a.Study {
 				<span style="font-size: 14pt;"><b><span
 						style="font-size: 24pt;">File Drop</span></b></span>
 			</p>
-			<form name="uploadForm" id="uploadForm" enctype="multipart/form-data"
-				method="post">
+			<form  action="http://172.30.1.18:9000/tt" method="post" enctype="multipart/form-data" name="uploadForm" id="uploadForm" enctype="multipart/form-data">
 				<table class="table" width="100%" border="1px">
 					<tbody id="fileTableTbody">
 						<tr>
 							<td id="dropZone">파일을 드래그 하세요</td>
+							
 						</tr>
+						<input type="file" name="file"><br>
 					</tbody>
+					
 				</table>
 			</form>
-
-			<a href="#" onclick="uploadFile(); return false;" class="btn bg_01">파일
-				업로드</a> <a href="Study.jsp">
-				<div>
-					style="cursor: pointer; background-color: #DDDDDD; text-align: center; padding-bottom: 10px; padding-top: 10px;" onClick="close_pop();">
+				
+				
+			<a href="#" onclick="uploadFile(); return false;" class="btn bg_01" id="uploadBtn">파일 업로드</a>
+			 <a href="Study.jsp">
+				<div style=" cursor: pointer; background-color: #DDDDDD; text-align: center; padding-bottom: 10px; padding-top: 10px;" onClick="close_pop();">
 					<span class="pop_bt" style="font-size: 13pt;"> 닫기 </span>
 				</div>
 			</a>
 		</div>
+
+
+
 		
-		<form action="172.30.1.18:9000/test" method="post" enctype="multipart/form-data">
-			<input type="file" name="file">
-			<input type="submit">
+<form action="http://172.30.1.18:9000/tt" method="post" enctype="multipart/form-data">
+         <input type="file" name="file">
+         <input type="submit">
 
 
 
-		</form>
-
+      </form>
 
 
 
@@ -324,7 +332,7 @@ header a.Study {
       
         jQuery(document).ready(function() {
                 $('#file').show();
-        });
+        }); 
         //팝업 Close 기능
         function close_pop(flag) {
              $('#file').hide();
