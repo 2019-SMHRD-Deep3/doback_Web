@@ -44,6 +44,7 @@ public class FrontController extends HttpServlet {
 		Icommand iCommand = map.get(resultURL);
 		moveURL = iCommand.execute(request, response);
 		response.sendRedirect(moveURL);
+		System.out.println("123123");
 
 	}
 

@@ -15,11 +15,12 @@ import model.MemberDAO;
 import model.MemberDTO;
 
 
+
 public class JoinCon implements Icommand {
 	
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
-		String moveURL;
+		String moveURL = null;
 		String id = request.getParameter("id");
 		String pw= request.getParameter("pw");
 		String email=request.getParameter("email");

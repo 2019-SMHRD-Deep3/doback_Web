@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+	pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <HTML>
 <head>
@@ -8,92 +8,99 @@
 </head>
 
 <meta charset="utf-8">
-    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">-->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Sedna - A Free HTML5/CSS3 website</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
-    <link rel="stylesheet" href="css/normalize.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/jquery.fancybox.css">
-    <link rel="stylesheet" href="css/flexslider.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/queries.css">
-    <link rel="stylesheet" href="css/etline-font.css">
-    <link rel="stylesheet" href="bower_components/animate.css/animate.min.css">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-    
-  <style>
-    header a.Study{
-    margin-right:20px;
-    }
-   
-    .hero {
-    min-height: 950px;
-    }
-    .hero .hero-content {
-    padding-top: 40%;
+<!--<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">-->
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>Sedna - A Free HTML5/CSS3 website</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+<link rel="stylesheet" href="css/normalize.min.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/jquery.fancybox.css">
+<link rel="stylesheet" href="css/flexslider.css">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/queries.css">
+<link rel="stylesheet" href="css/etline-font.css">
+<link rel="stylesheet"
+	href="bower_components/animate.css/animate.min.css">
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
+<style>
+header a.Study {
+	margin-right: 20px;
 }
+
+.hero {
+	min-height: 950px;
+}
+
+.hero .hero-content {
+	padding-top: 40%;
+}
+
 .section-padding {
-    padding-top: 100px;
-    padding-bottom:100px;
+	padding-top: 100px;
+	padding-bottom: 100px;
 }
-.intro{
- padding-top: 50px;
+
+.intro {
+	padding-top: 50px;
 }
+
 .hero-strip {
-    margin-top: 0px;
-    padding-top:80px;
-    padding-bottom:50px;
-    }
-    .blog-intro{
-    padding-top:50px;
-    padding-bottom:150px;}
-    
-    .container{
-    color: red;
-    }
-    
-    #word > h5{
-    margin-bottom: 30px;
-    }
-       .modal {
-            display: none; /* Hidden by default */
-            position: fixed; /* Stay in place */
-            z-index: 1; /* Sit on top */
-            left: 0;
-            top: 0;
-            width: 100%; /* Full width */
-            height: 100%; /* Full height */
-            overflow: auto; /* Enable scroll if needed */
-            background-color: rgb(0,0,0); /* Fallback color */
-            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-        }
-    
-        /* Modal Content/Box */
-        .modal-content {
-            background-color: #fefefe;
-            margin: 15% auto; /* 15% from the top and centered */
-            padding: 20px;
-            border: 1px solid #888;
-            width: 30%; /* Could be more or less, depending on screen size */                          
-        }
-    
-    
-    
-    
-    </style>
+	margin-top: 0px;
+	padding-top: 80px;
+	padding-bottom: 50px;
+}
+
+.blog-intro {
+	padding-top: 50px;
+	padding-bottom: 150px;
+}
+
+.container {
+	color: red;
+}
+
+#word>h5 {
+	margin-bottom: 30px;
+}
+
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0, 0, 0); /* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+	background-color: #fefefe;
+	margin: 15% auto; /* 15% from the top and centered */
+	padding: 20px;
+	border: 1px solid #888;
+	width: 30%; /* Could be more or less, depending on screen size */
+}
+</style>
 </head>
 
 <BODY>
-<script src="http://code.jquery.com/jquery-latest.js"></script>
- 
-<script type="text/javascript">
-	
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+
+	<script type="text/javascript">
+
+
+   
 
 
  
@@ -274,31 +281,46 @@
         }
     }
 </script>
-       <div id="file" class="modal" >
-      <div class="modal-content" >
-                <p style="text-align: center;"><span style="font-size: 14pt;"><b><span style="font-size: 24pt;">File Drop</span></b></span></p>
-                               <form name="uploadForm" id="uploadForm" enctype="multipart/form-data" method="post">
-        <table class="table" width="100%" border="1px">
-            <tbody id="fileTableTbody">
-                <tr>
-                    <td id="dropZone">
-                        파일을 드래그 하세요
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </form>
-        
-    <a href="#" onclick="uploadFile(); return false;" class="btn bg_01">파일 업로드</a>
-           <a href="Study.jsp">  <div style="cursor:pointer;background-color:#DDDDDD;text-align: center;padding-bottom: 10px;padding-top: 10px;" onClick="close_pop();">
-               <span class="pop_bt" style="font-size: 13pt;" >
-                  닫기
-                </span>
-            </div></a>
-      </div>
- 
-    </div>
-    <script type="text/javascript">
+	<div id="file" class="modal">
+		<div class="modal-content">
+			<p style="text-align: center;">
+				<span style="font-size: 14pt;"><b><span
+						style="font-size: 24pt;">File Drop</span></b></span>
+			</p>
+			<form name="uploadForm" id="uploadForm" enctype="multipart/form-data"
+				method="post">
+				<table class="table" width="100%" border="1px">
+					<tbody id="fileTableTbody">
+						<tr>
+							<td id="dropZone">파일을 드래그 하세요</td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+
+			<a href="#" onclick="uploadFile(); return false;" class="btn bg_01">파일
+				업로드</a> <a href="Study.jsp">
+				<div>
+					style="cursor: pointer; background-color: #DDDDDD; text-align: center; padding-bottom: 10px; padding-top: 10px;" onClick="close_pop();">
+					<span class="pop_bt" style="font-size: 13pt;"> 닫기 </span>
+				</div>
+			</a>
+		</div>
+		
+		<form action="172.30.1.18:9000/test" method="post" enctype="multipart/form-data">
+			<input type="file" name="file">
+			<input type="submit">
+
+
+
+		</form>
+
+
+
+
+
+	</div>
+	<script type="text/javascript">
       
         jQuery(document).ready(function() {
                 $('#file').show();
@@ -309,9 +331,8 @@
         };
     
       </script>
-    
-   
+
+
 </BODY>
 </HTML>
- 
 
