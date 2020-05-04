@@ -63,10 +63,7 @@ header a.login {
 	padding-top: 50px;
 	padding-bottom: 150px;
 }
-#gender_check{
 
-	
-}
 </style>
 </head>
 <body>
