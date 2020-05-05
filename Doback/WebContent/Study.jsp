@@ -87,7 +87,7 @@
                             <ul class="member-actions" style=padding-top:19px;>
                                 <li><a href="Study.jsp" class="Study">학습하기</a></li>
                                 <li><a href="MyStudy.jsp" class="MyStudy">나의 학습실</a></li>                               
-                                <li><a href="#download" class="Community"></a>고객센터</li>                              
+                                                        
                                 </ul>
                          
                         </nav>
@@ -106,11 +106,24 @@
                	녹음한 파일을 올려주세요 
                 </h2>
                 <p>Please put on your voice record!</p>
-                <a href="File.jsp"  data-toggle="modal" data-target="#file" class="btn btn-ghost btn-accent btn-large">Click</a>
+                <a href="File.jsp"  data-toggle="modal" data-target="#file" id=filebtn class="btn btn-ghost btn-accent btn-large">Click</a>
                  <!-- <div class="logo-placeholder floating-logo"><img src="img/sketch-logo.png" alt="Sketch Logo"></div>  -->
             </div>
         </div>
     </section>
+    
+    <script>
+    $('a[href="#filebtn"]').click(function(event) {
+      $("File.jsp").attr("style","display:block");
+    });
+</script>
+    
+    
+    
+    
+    
+    
+    
     <section class="blog-intro section-padding" id="blog">
         <div class="container">
             <div class="row">

@@ -291,21 +291,24 @@ text-align: center;
 				<span style="font-size: 14pt;"><b><span
 						style="font-size: 24pt;">File Drop</span></b></span>
 			</p>
-			<form  action="http://172.30.1.18:9000/tt" method="post" enctype="multipart/form-data" name="uploadForm" id="uploadForm" enctype="multipart/form-data">
+			<form  action="http://172.30.1.18:9000/test" method="post" enctype="multipart/form-data" name="uploadForm" id="uploadForm" >
 				<table class="table" width="100%" border="1px">
 					<tbody id="fileTableTbody">
 						<tr>
 							<td id="dropZone">파일을 드래그 하세요</td>
 							
 						</tr>
-						<input type="file" name="file"><br>
+						
 					</tbody>
 					
 				</table>
+							<input type="file" name="file"   ><br>
+							<input type="submit" value="업로드" id="uploadBtn" > 
 			</form>
 				
 				
-			<a href="#" onclick="uploadFile(); return false;" class="btn bg_01" id="uploadBtn">파일 업로드</a>
+				<!-- <a href="#" onclick="uploadFile(); return false;" class="btn bg_01" id="uploadBtn">파일 업로드</a> -->
+				
 			 <a href="Study.jsp">
 				<div style=" cursor: pointer; background-color: #DDDDDD; text-align: center; padding-bottom: 10px; padding-top: 10px;" onClick="close_pop();">
 					<span class="pop_bt" style="font-size: 13pt;"> 닫기 </span>
@@ -316,13 +319,11 @@ text-align: center;
 
 
 		
-<form action="http://172.30.1.18:9000/tt" method="post" enctype="multipart/form-data">
+<!-- <form action="http://172.30.1.18:9000/tt" method="post" enctype="multipart/form-data">
          <input type="file" name="file">
          <input type="submit">
 
-
-
-      </form>
+      </form> -->
 
 
 
