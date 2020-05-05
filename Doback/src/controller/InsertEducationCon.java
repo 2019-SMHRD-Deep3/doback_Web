@@ -20,11 +20,11 @@ public class InsertEducationCon implements Icommand {
 		int allsim = Integer.parseInt(request.getParameter("allsim"));
 		int uk = Integer.parseInt(request.getParameter("uk"));
 		int us = Integer.parseInt(request.getParameter("us"));
-		int idnum = Integer.parseInt(request.getParameter("idnum"));
+
 		int recordnum = Integer.parseInt(request.getParameter("recordnum"));
 		
 		EducationDTO dto = new EducationDTO(word1, word2, word3, sentence1, sentence2,
-				allsim, uk, us, idnum, recordnum);
+				allsim, uk, us, recordnum);
 		EducationDAO dao = EducationDAO.getDAO();
 		int cnt = dao.insertEducation(dto);
 		

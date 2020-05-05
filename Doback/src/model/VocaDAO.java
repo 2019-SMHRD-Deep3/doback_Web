@@ -6,20 +6,20 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class EducationDAO {
-
+public class VocaDAO {
+	
 	private Connection conn;
 	private PreparedStatement psmt;
 	private ResultSet rs;
 
-	private static EducationDAO dao;
-	private EducationDAO() {
+	private static VocaDAO dao;
+	private VocaDAO() {
 		
 	}
 	
-	public static EducationDAO getDAO() {
+	public static VocaDAO getDAO() {
 		if(dao == null) {
-			dao = new EducationDAO();
+			dao = new VocaDAO();
 		}
 		return dao;
 	}
@@ -52,22 +52,13 @@ public class EducationDAO {
 		}
 	}
 
-	public int insertEducation(EducationDTO dto) {
+	public int insertVoca(VocaDTO dto) {
 		int cnt = 0;
 		try {
 			getConnection();
-			String sql = "insert into yndeducation values(edu_seq.nextval,?,?,?,?,?,?,?,?,?)";
+			String sql = "insert into yndVoca values(wor_seq.nextval,?)";
 			psmt = conn.prepareStatement(sql);
-			psmt.setInt(1, dto.getWord1());
-			psmt.setInt(2, dto.getWord2());
-			psmt.setInt(3, dto.getWord3());
-			psmt.setInt(4, dto.getSentence1());
-			psmt.setInt(5, dto.getSentence2());
-			psmt.setInt(6, dto.getAllsim());
-			psmt.setInt(7, dto.getUk());
-			psmt.setInt(8, dto.getUs());
-
-			psmt.setInt(9, dto.getRecordnum());
+			psmt.setString(1, dto.getVoca());
 			cnt = psmt.executeUpdate();
 
 		} catch (SQLException e) {
@@ -78,42 +69,23 @@ public class EducationDAO {
 
 	}
 
-	public EducationDTO findEducation(EducationDTO dto) {
-		EducationDTO info = null;
+	public VocaDTO findVoca(VocaDTO dto) {
+		VocaDTO info = null;
 		
-		int f_word1;
-		int f_word2;
-		int f_word3;
-		int f_sentence1;
-		int f_sentence2;
-		int f_allsim;
-		int f_uk;
-		int f_us;
-
-		int f_recordnum;
+		String f_Voca;
 	   
 	    try {
 	    	getConnection();
-	 	    String sql = "select * from yndeducation where edunum=?";
+	 	    String sql = "select * from yndVoca where Vocanum=?";
 			psmt = conn.prepareStatement(sql);
-			psmt.setInt(1,dto.getEdunum());
+			psmt.setInt(1,dto.getVocanum());
 			rs = psmt.executeQuery();
 			
 			if(rs.next()) {
-				f_word1 = rs.getInt("word1");
-				f_word2 = rs.getInt("word2");
-				f_word3 = rs.getInt("word3");
-				f_sentence1 = rs.getInt("sentence1");
-				f_sentence2 = rs.getInt("sentence2");
-				f_allsim = rs.getInt("allsim");
-				f_uk = rs.getInt("uk");
-				f_us = rs.getInt("us");
-
-				f_recordnum = rs.getInt("recordnum");
+				f_Voca = rs.getString("Voca");
 				
 				
-				info = new EducationDTO(f_word1, f_word2, f_word3, f_sentence1, f_sentence2,
-						f_allsim, f_uk, f_us, f_recordnum);
+				info = new VocaDTO(dto.getVocanum(), f_Voca);
 				
 			}
 		} catch (SQLException e) {

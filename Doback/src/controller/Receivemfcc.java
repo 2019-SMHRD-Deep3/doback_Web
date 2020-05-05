@@ -28,9 +28,6 @@ public class Receivemfcc extends HttpServlet {
       System.out.println(record);
       System.out.println(word1);
       
-      RecordDTO rdto = new RecordDTO(record, 1);
-      
-      
       //EducationDTO dto = new EducationDTO(result, resultUK, resultUS, record, word1);
       
       
