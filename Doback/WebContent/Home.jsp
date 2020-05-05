@@ -141,9 +141,8 @@ header a.login {
 				<div class="col-md-10 col-md-offset-1">
 					<div class="hero-content text-center" id="title">
 						<h1>원어민과의 영어 발음 유사도 측정서비스</h1><br>
-						
 						<p class="intro">Let's start to measure your English pronounce with us.</p>
-						<a href="#" class="btn btn-accent btn-large" data-toggle="modal" data-target="#myModal">바로 가기</a>
+						<a href="#" class="btn btn-accent btn-large" data-toggle="modal" data-target="#myModal">측정 해보기</a>
 					</div>
 				</div>
 			</div>
@@ -327,13 +326,6 @@ header a.login {
 		</div>
 
 	</section>
-
-	<section class="intro section-padding">
-		<div class="container"></div>
-		</div>
-	</section>
-
-
 	<!-- Scripts -->
 
 	<script

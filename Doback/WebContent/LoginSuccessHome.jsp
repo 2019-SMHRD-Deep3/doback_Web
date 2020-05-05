@@ -30,6 +30,9 @@
 header a.Study {
 	margin-right: 20px;
 }
+header a.MyStudy {
+	margin-right: 20px;
+}
 
 .hero {
 	min-height: 950px;
@@ -113,7 +116,7 @@ header a.Study {
 							<ul class="member-actions" style="padding-top: 19px;">
 								 <li><a href="Study.jsp" class="Study">학습하기</a></li>   
                                 <li><a href="MyStudy.jsp" class="MyStudy">나의 학습실</a></li>                                 
-                                <li><a href="#download" class="Coummunity"></a>고객센터</li>
+                                <li><a href="Home.jsp" class="Logout">로그아웃</a></li>
 				<!-- 				<li><a href="#find_IdPw"  data-toggle="modal" data-target="#modal"  class="find_IdPw">아이디/비번찾기</a></li> -->
 							</ul>
 
@@ -132,8 +135,7 @@ header a.Study {
 					<div class="hero-content text-center" id = "title">
 						<h1>원어민과의 영어 발음 유사도 측정서비스</h1>
 						<p class="intro">Let's start to measure your English pronounce with us.</p>
-						<br>
-						<a href="#" class="btn btn-accent btn-large" data-toggle="modal" data-target="#myModal">바로 가기</a>
+						<a href="#" class="btn btn-accent btn-large" data-toggle="modal" data-target="#myModal">측정 해보기</a>
 						
 						
 					</div>
@@ -287,12 +289,6 @@ header a.Study {
 		</div>
 
 	</section>
-
-	<section class="intro section-padding">
-		<div class="container"></div>
-		</div>
-	</section>
-
 
 	<!-- Scripts -->
 
