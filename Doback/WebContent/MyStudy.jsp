@@ -28,9 +28,13 @@
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     
   <style>
-        header a.Study{
-    margin-right:20px;
-    }
+header a.Study {
+	margin-right: 20px;
+}
+header a.MyStudy {
+	margin-right: 20px;
+}
+
    
     .hero {
     min-height: 950px;
@@ -75,7 +79,7 @@
                     <div class="header-nav">
                         <nav>
                             <ul class="primary-nav">
-                                <li><a href="#assets" class="btn-white btn-small" style=padding-right:19px;padding-left:19px;>소개</a></li>
+                                <!-- <li><a href="#assets" class="btn-white btn-small" style=padding-right:19px;padding-left:19px;>소개</a></li> -->
                                 <!-- <li><a href="#assets">나의 강의실</a></li>
                                 <li><a href="#blog">Blog</a></li>
                                 <li><a href="#download">Download</a></li> -->
@@ -83,7 +87,7 @@
                             <ul class="member-actions" style=padding-top:19px;>
                             	<li><a href="Study.jsp" class="Study">학습하기</a></li>   
                                 <li><a href="MyStudy.jsp" class="MyStudy">나의 학습실</a></li>                               
-                                <li><a href="#download" class="Coummunity"></a>고객센터</li>
+                                <li><a href="Home.jsp" class="Logout">로그아웃</a></li>
                                
                                 </ul>
                          
@@ -107,7 +111,10 @@
                 <div class="col-md-5 col-md-offset-7">
                 <div class="feature-list">
                 <h5>나의 발음은?</h5>
-                <h4><%%></h4>
+                <h4><%for(int i = 1; i <1000; i++){
+                	
+                	
+                } %></h4>
                 </div>
                     <div class="feature-list">
                         <h3>나의 회화 분석 이력</h3>

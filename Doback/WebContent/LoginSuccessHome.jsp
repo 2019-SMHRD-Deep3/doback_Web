@@ -27,9 +27,12 @@
 
 
 <style>
-    header a.Study{
-    margin-right:20px;
-    }
+header a.Study {
+	margin-right: 20px;
+}
+header a.MyStudy {
+	margin-right: 20px;
+}
 
 .hero {
 	min-height: 950px;
@@ -58,31 +61,33 @@
 	padding-bottom: 150px;
 }
 
- /* The Modal (background) */
-        .modal {
-            display: none; /* Hidden by default */
-            position: fixed; /* Stay in place */
-            z-index: 1; /* Sit on top */
-            left: 0;
-            top: 0;
-            width: 100%; /* Full width */
-            height: 100%; /* Full height */
-            overflow: auto; /* Enable scroll if needed */
-            background-color: rgb(0,0,0); /* Fallback color */
-            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-        }
-    
-        /* Modal Content/Box */
-        .modal-content {
-            background-color: #fefefe;
-            margin: 15% auto; /* 15% from the top and centered */
-            padding: 20px;
-            border: 1px solid #888;
-            width: 30%; /* Could be more or less, depending on screen size */                          
-        }
+/* The Modal (background) */
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0, 0, 0); /* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
 
+/* Modal Content/Box */
+.modal-content {
+	background-color: #fefefe;
+	margin: 15% auto; /* 15% from the top and centered */
+	padding: 20px;
+	border: 1px solid #888;
+	width: 30%; /* Could be more or less, depending on screen size */
+}
 
-
+#title h1 {
+	font-size: 35pt;
+	font-weight: 900;
+}
 </style>
 
 </head>
@@ -102,8 +107,8 @@
 					<div class="header-nav">
 						<nav>
 							<ul class="primary-nav">
-								<li><a href="#assets" class="btn-white btn-small"
-									style="padding-right: 19px; padding-left: 19px;">야너두 소개</a></li>
+								<!-- <li><a href="#assets" class="btn-white btn-small"
+									style="padding-right: 19px; padding-left: 19px;">야너두 소개</a></li> --> -->
 								<!-- <li><a href="#assets">나의 강의실</a></li>
                                 <li><a href="#blog">Blog</a></li>
                                 <li><a href="#download">Download</a></li> -->
@@ -111,7 +116,7 @@
 							<ul class="member-actions" style="padding-top: 19px;">
 								 <li><a href="Study.jsp" class="Study">학습하기</a></li>   
                                 <li><a href="MyStudy.jsp" class="MyStudy">나의 학습실</a></li>                                 
-                                <li><a href="#download" class="Coummunity"></a>고객센터</li>
+                                <li><a href="Home.jsp" class="Logout">로그아웃</a></li>
 				<!-- 				<li><a href="#find_IdPw"  data-toggle="modal" data-target="#modal"  class="find_IdPw">아이디/비번찾기</a></li> -->
 							</ul>
 
@@ -127,10 +132,11 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-10 col-md-offset-1">
-					<div class="hero-content text-center">
+					<div class="hero-content text-center" id = "title">
 						<h1>원어민과의 영어 발음 유사도 측정서비스</h1>
-						
 						<p class="intro">Let's start to measure your English pronounce with us.</p>
+						<a href="#" class="btn btn-accent btn-large" data-toggle="modal" data-target="#myModal">측정 해보기</a>
+						
 						
 					</div>
 				</div>
@@ -283,12 +289,6 @@
 		</div>
 
 	</section>
-
-	<section class="intro section-padding">
-		<div class="container"></div>
-		</div>
-	</section>
-
 
 	<!-- Scripts -->
 
