@@ -61,7 +61,9 @@
     #word > h5{
     margin-bottom: 30px;
     }
-    
+  	#warning {
+  		color : red;
+  	}
     
     
     </style>
@@ -131,9 +133,11 @@
                 </div>
                 
                 <div class="col-md-6 col-sm-12 col-xs-12 rightcol">
-                
-                    <h5>SPREADING PIXELS AROUND THE WORLD</h5>
-                    <p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <h3 id="warning">파일 업로드 시 주의 할 점</h3>
+					<h5>1.파일은 반드시 ".wav" 파일로 업로드 해주세요.</h5>
+					<h5>2.단어 하나 하나, 문장 하나 하나 세부적인 결과를 보여드리기 위해 파일 녹음을 각각 순서대로 업로드 해주세요.</h5>
+					<h5>3.정확한 측정을 위해 조용한 곳에서 녹음한 파일을 업로드 해주세요.</h5>
+					<h5>4.틀리다고 짜증내면 신고합니다. 주의하세요!</h5>
                 </div>
             </div>
         </div>
