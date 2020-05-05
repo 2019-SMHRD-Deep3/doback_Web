@@ -34,7 +34,7 @@ public class LoginCon implements Icommand {
 		if(info == null) {
 			moveURL = "Login.jsp"; //로그인 페이지 or 아이디 비번 찾기 페이지
 		}else {
-			moveURL = "Study.jsp";
+			moveURL = "LoginSuccessHome.jsp";
 		}
 		
 		

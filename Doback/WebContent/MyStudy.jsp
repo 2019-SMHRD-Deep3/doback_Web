@@ -107,7 +107,10 @@
                 <div class="col-md-5 col-md-offset-7">
                 <div class="feature-list">
                 <h5>나의 발음은?</h5>
-                <h4><%%></h4>
+                <h4><%for(int i = 1; i <1000; i++){
+                	
+                	
+                } %></h4>
                 </div>
                     <div class="feature-list">
                         <h3>나의 회화 분석 이력</h3>
