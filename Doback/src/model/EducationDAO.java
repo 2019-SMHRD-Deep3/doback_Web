@@ -13,9 +13,6 @@ public class EducationDAO {
 	private ResultSet rs;
 
 	private static EducationDAO dao;
-	private EducationDAO() {
-		
-	}
 	
 	public static EducationDAO getDAO() {
 		if(dao == null) {
@@ -120,10 +117,36 @@ public class EducationDAO {
 		
 			e.printStackTrace();
 		}
-	   
-	    
-	    
 		return info;
+	}
+
+	public int insertdata(int word1, int word2, int ord3, int sentence1, int sentence2, int allstm, int uk, int us, int recordnum) {
+		
+		int cnt = 0;
+		try {
+			getConnection();
+			String sql = "insert into yndeducation values(edu_seq.nextval,?,?,?,?,?,?,?,?,?)";
+			psmt = conn.prepareStatement(sql);
+			psmt.setInt(1, word1);
+			psmt.setInt(2, word2);
+			psmt.setInt(3, ord3);
+			psmt.setInt(4, sentence1);
+			psmt.setInt(5, sentence2);
+			psmt.setInt(6, allstm);
+			psmt.setInt(7, uk);
+			psmt.setInt(8, us);
+			psmt.setInt(9, recordnum);
+			cnt = psmt.executeUpdate();
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		
+		return cnt;
+		
+		
 	}
 
 }

@@ -13,9 +13,6 @@ public class VocaDAO {
 	private ResultSet rs;
 
 	private static VocaDAO dao;
-	private VocaDAO() {
-		
-	}
 	
 	public static VocaDAO getDAO() {
 		if(dao == null) {
@@ -83,19 +80,40 @@ public class VocaDAO {
 			
 			if(rs.next()) {
 				f_Voca = rs.getString("Voca");
-				
-				
 				info = new VocaDTO(dto.getVocanum(), f_Voca);
 				
 			}
 		} catch (SQLException e) {
 		
 			e.printStackTrace();
+		}finally {
+			close();
 		}
 	   
-	    
-	    
 		return info;
 	}
 
+	public int findVocaNum(String s) {
+	    int vocanum = 0;
+	    
+		try {
+	    	getConnection();
+	 	    String sql = "select vocanum from YNDVOCA where voca=?";
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1,s);
+			rs = psmt.executeQuery();
+			
+			if(rs.next()) {
+				vocanum = rs.getInt(1);
+			}
+		} catch (SQLException e) {
+		
+			e.printStackTrace();
+		}finally {
+			close();
+		}
+	   
+		return vocanum;
+	}
+	
 }

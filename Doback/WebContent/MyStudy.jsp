@@ -27,44 +27,47 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     
-  <style>
+<style>
 header a.Study {
 	margin-right: 20px;
 }
+
 header a.MyStudy {
 	margin-right: 20px;
 }
 
-   
-    .hero {
-    min-height: 950px;
-    }
-    .hero .hero-content {
-    padding-top: 40%;
+.hero {
+	min-height: 950px;
 }
+
+.hero .hero-content {
+	padding-top: 40%;
+}
+
 .section-padding {
-    padding-top: 100px;
-    padding-bottom:100px;
+	padding-top: 100px;
+	padding-bottom: 100px;
 }
-.intro{
- padding-top: 50px;
+
+.intro {
+	padding-top: 50px;
 }
+
 .hero-strip {
-    margin-top: 0px;
-    padding-top:80px;
-    padding-bottom:50px;
-    }
-    .blog-intro{
-    padding-top:50px;
-    padding-bottom:150px;}
-    
-    .container{
-    color: red;
-    }
-    
-    
-    
-    </style>
+	margin-top: 0px;
+	padding-top: 80px;
+	padding-bottom: 50px;
+}
+
+.blog-intro {
+	padding-top: 50px;
+	padding-bottom: 150px;
+}
+
+.container {
+	color: red;
+}
+</style>
 </head>
 
 <body id="top">

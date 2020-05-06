@@ -13,9 +13,6 @@ public class RecordDAO {
 	private ResultSet rs;
 
 	private static RecordDAO dao;
-	private RecordDAO() {
-		
-	}
 	
 	public static RecordDAO getDAO() {
 		if(dao == null) {
@@ -75,9 +72,10 @@ public class RecordDAO {
 		RecordDTO info = null;
 		
 		String f_record;
-		int f_wordnum;
-		String f_recorddate;
-	   
+		int f_vocanum;
+		int f_recordnum;
+	    int f_idnum;
+	    String f_recorddate;
 	    try {
 	    	getConnection();
 	 	    String sql = "select * from yndrecord where recordnum=?";
@@ -87,9 +85,9 @@ public class RecordDAO {
 			
 			if(rs.next()) {
 				f_record = rs.getString("record");
-				f_wordnum = rs.getInt("wordnum");
-			
-				info = new RecordDTO(f_record, f_wordnum);
+				f_vocanum = rs.getInt("vocanum");
+				f_recordnum = rs.getInt("recordnum");
+				info = new RecordDTO(f_recordnum, f_vocanum,f_record);
 				
 			}
 		} catch (SQLException e) {
@@ -100,5 +98,54 @@ public class RecordDAO {
 	    
 	    
 		return info;
+	}
+	
+	
+	public int insert(String record, int vocanum, int idnum) {
+		
+		int cnt = 0;
+		
+		try {
+	    	getConnection();
+	 	    String sql = "insert into YNDRECORD values(REC_SEQ.nextval, ?, ?, to_char(sysdate,'yyyy.mm.dd hh24:mi'),?)";
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1,record);
+			psmt.setInt(2,vocanum);
+			psmt.setInt(3,idnum);
+			
+			cnt = psmt.executeUpdate();
+			
+		} catch (SQLException e) {
+		
+			e.printStackTrace();
+		}finally {
+			close();
+		}
+		return cnt;
+	}
+
+	public int select(String recode) {
+		
+		int recordnum = 0;
+		try {
+	    	getConnection();
+	 	    String sql = "select recordnum from YNDRECORD where = ?";
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1,recode);
+			
+			rs = psmt.executeQuery();
+			if(rs.next()) {
+				recordnum = rs.getInt(1);
+			}
+			
+		} catch (SQLException e) {
+		
+			e.printStackTrace();
+		}finally {
+			close();
+		}
+		
+		
+		return recordnum;
 	}
 }
