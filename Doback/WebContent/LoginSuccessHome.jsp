@@ -135,7 +135,7 @@ header a.MyStudy {
 					<div class="hero-content text-center" id = "title">
 						<h1>원어민과의 영어 발음 유사도 측정서비스</h1>
 						<p class="intro">Let's start to measure your English pronounce with us.</p>
-						<a href="#" class="btn btn-accent btn-large" data-toggle="modal" data-target="#myModal">측정 해보기</a>
+						<a href="Study.jsp" class="btn btn-accent btn-large">측정 해보기</a>
 						
 						
 					</div>
