@@ -120,7 +120,7 @@ public class EducationDAO {
 		return info;
 	}
 
-	public int insertdata(int word1, int word2, int ord3, int sentence1, int sentence2, int allstm, int uk, int us, int recordnum) {
+	public int insertdata(int word1, int word2, int word3, int sentence1, int sentence2, int allstm, int uk, int us, int recordnum) {
 		
 		int cnt = 0;
 		try {
@@ -129,7 +129,7 @@ public class EducationDAO {
 			psmt = conn.prepareStatement(sql);
 			psmt.setInt(1, word1);
 			psmt.setInt(2, word2);
-			psmt.setInt(3, ord3);
+			psmt.setInt(3, word3);
 			psmt.setInt(4, sentence1);
 			psmt.setInt(5, sentence2);
 			psmt.setInt(6, allstm);
