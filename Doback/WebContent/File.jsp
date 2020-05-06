@@ -305,6 +305,7 @@ text-align: center;
 							<input multiple="multiple" type="file" name="file[]"   ><br>
 							<%=a %>
 							<input type= hidden value="<%=a %>" name="wordvoca">
+
 							<input type="submit" value="¾÷·Îµå" id="uploadBtn" > 
 			</form>
 				

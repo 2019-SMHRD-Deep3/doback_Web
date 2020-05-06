@@ -6,16 +6,17 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class RecordDAO {
+public class VocaDAO {
 	
 	private Connection conn;
 	private PreparedStatement psmt;
 	private ResultSet rs;
 
-	private static RecordDAO dao;
-	public static RecordDAO getDAO() {
+	private static VocaDAO dao;
+	
+	public static VocaDAO getDAO() {
 		if(dao == null) {
-			dao = new RecordDAO();
+			dao = new VocaDAO();
 		}
 		return dao;
 	}
@@ -48,15 +49,13 @@ public class RecordDAO {
 		}
 	}
 
-	public int insertRecord(RecordDTO dto) {
+	public int insertVoca(VocaDTO dto) {
 		int cnt = 0;
 		try {
 			getConnection();
-			String sql = "insert into yndrecord values(rec_seq.nextval,?,?,?)";
+			String sql = "insert into yndVoca values(wor_seq.nextval,?)";
 			psmt = conn.prepareStatement(sql);
-			psmt.setString(1, dto.getRecord());
-			psmt.setInt(2, dto.getWordnum());
-			psmt.setString(3, dto.getRecorddate());
+			psmt.setString(1, dto.getVoca());
 			cnt = psmt.executeUpdate();
 
 		} catch (SQLException e) {
@@ -67,84 +66,54 @@ public class RecordDAO {
 
 	}
 
-	public RecordDTO findRecord(RecordDTO dto) {
-		RecordDTO info = null;
+	public VocaDTO findVoca(VocaDTO dto) {
+		VocaDTO info = null;
 		
-		String f_record;
-		int f_vocanum;
-		int f_recordnum;
-	    int f_idnum;
-	    String f_recorddate;
+		String f_Voca;
+	   
 	    try {
 	    	getConnection();
-	 	    String sql = "select * from yndrecord where recordnum=?";
+	 	    String sql = "select * from yndVoca where Vocanum=?";
 			psmt = conn.prepareStatement(sql);
-			psmt.setInt(1,dto.getRecordnum());
+			psmt.setInt(1,dto.getVocanum());
 			rs = psmt.executeQuery();
 			
 			if(rs.next()) {
-				f_record = rs.getString("record");
-				f_vocanum = rs.getInt("vocanum");
-				f_recordnum = rs.getInt("recordnum");
-				info = new RecordDTO(f_recordnum, f_vocanum,f_record);
+				f_Voca = rs.getString("Voca");
+				info = new VocaDTO(dto.getVocanum(), f_Voca);
 				
 			}
 		} catch (SQLException e) {
 		
 			e.printStackTrace();
+		}finally {
+			close();
 		}
 	   
-	    
-	    
 		return info;
 	}
-	
-	
-	public int insert(String record, int vocanum, int idnum) {
-		
-		int cnt = 0;
-		
-		try {
-	    	getConnection();
-	 	    String sql = "insert into YNDRECORD values(REC_SEQ.nextval, ?, ?, to_char(sysdate,'yyyy.mm.dd hh24:mi'),?)";
-			psmt = conn.prepareStatement(sql);
-			psmt.setString(1,record);
-			psmt.setInt(2,vocanum);
-			psmt.setInt(3,idnum);
-			
-			cnt = psmt.executeUpdate();
-			
-		} catch (SQLException e) {
-		
-			e.printStackTrace();
-		}finally {
-			close();
-		}
-		return cnt;
-	}
 
-	public int select(String recode) {
-		
-		int recordnum = 0;
+	public int findVocaNum(String s) {
+	    int vocanum = 0;
+	    
 		try {
 	    	getConnection();
-	 	    String sql = "select recordnum from YNDRECORD where = ?";
+	 	    String sql = "select vocanum from YNDVOCA where voca=?";
 			psmt = conn.prepareStatement(sql);
-			psmt.setString(1,recode);
-			
+			psmt.setString(1,s);
 			rs = psmt.executeQuery();
-			if(rs.next()) {
-				recordnum = rs.getInt(1);
-			}
 			
+			if(rs.next()) {
+				vocanum = rs.getInt(1);
+			}
 		} catch (SQLException e) {
 		
 			e.printStackTrace();
 		}finally {
 			close();
 		}
-		
-		
-		return recordnum;
+	   
+		return vocanum;
 	}
+	
 }

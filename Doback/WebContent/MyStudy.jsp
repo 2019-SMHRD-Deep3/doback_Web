@@ -27,40 +27,47 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     
-  <style>
-        header a.Study{
-    margin-right:20px;
-    }
-   
-    .hero {
-    min-height: 950px;
-    }
-    .hero .hero-content {
-    padding-top: 40%;
+<style>
+header a.Study {
+	margin-right: 20px;
 }
+
+header a.MyStudy {
+	margin-right: 20px;
+}
+
+.hero {
+	min-height: 950px;
+}
+
+.hero .hero-content {
+	padding-top: 40%;
+}
+
 .section-padding {
-    padding-top: 100px;
-    padding-bottom:100px;
+	padding-top: 100px;
+	padding-bottom: 100px;
 }
-.intro{
- padding-top: 50px;
+
+.intro {
+	padding-top: 50px;
 }
+
 .hero-strip {
-    margin-top: 0px;
-    padding-top:80px;
-    padding-bottom:50px;
-    }
-    .blog-intro{
-    padding-top:50px;
-    padding-bottom:150px;}
-    
-    .container{
-    color: red;
-    }
-    
-    
-    
-    </style>
+	margin-top: 0px;
+	padding-top: 80px;
+	padding-bottom: 50px;
+}
+
+.blog-intro {
+	padding-top: 50px;
+	padding-bottom: 150px;
+}
+
+.container {
+	color: red;
+}
+</style>
 </head>
 
 <body id="top">
@@ -75,7 +82,7 @@
                     <div class="header-nav">
                         <nav>
                             <ul class="primary-nav">
-                                <li><a href="#assets" class="btn-white btn-small" style=padding-right:19px;padding-left:19px;>소개</a></li>
+                                <!-- <li><a href="#assets" class="btn-white btn-small" style=padding-right:19px;padding-left:19px;>소개</a></li> -->
                                 <!-- <li><a href="#assets">나의 강의실</a></li>
                                 <li><a href="#blog">Blog</a></li>
                                 <li><a href="#download">Download</a></li> -->
@@ -83,7 +90,7 @@
                             <ul class="member-actions" style=padding-top:19px;>
                             	<li><a href="Study.jsp" class="Study">학습하기</a></li>   
                                 <li><a href="MyStudy.jsp" class="MyStudy">나의 학습실</a></li>                               
-                                <li><a href="#download" class="Coummunity"></a>고객센터</li>
+                                <li><a href="Home.jsp" class="Logout">로그아웃</a></li>
                                
                                 </ul>
                          
@@ -99,7 +106,19 @@
                 <section class="features section-padding" id="features">
              <div class="container">
             <div class="row">
+            	
+                <% %>
+                
+                
+              
                 <div class="col-md-5 col-md-offset-7">
+                <div class="feature-list">
+                <h5>나의 발음은?</h5>
+                <h4><%for(int i = 1; i <1000; i++){
+                	
+                	
+                } %></h4>
+                </div>
                     <div class="feature-list">
                         <h3>나의 회화 분석 이력</h3>
                         <p>당신의 학습 이력을 확인해보세요:)</p>

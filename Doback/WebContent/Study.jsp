@@ -86,7 +86,7 @@
                     <div class="header-nav">
                         <nav>
                             <ul class="primary-nav">
-                                <li><a href="#assets" class="btn-white btn-small" style=padding-right:19px;padding-left:19px;>소개</a></li>
+                                <!-- <li><a href="#assets" class="btn-white btn-small" style=padding-right:19px;padding-left:19px;>소개</a></li> -->
                                 <!-- <li><a href="#assets">나의 강의실</a></li>
                                 <li><a href="#blog">Blog</a></li>
                                 <li><a href="#download">Download</a></li> -->
@@ -110,7 +110,7 @@
         <div class="container">
             <div class="col-md-12 text-center">
                 <h2>
-               	녹음한 파일을 올려주세요 
+                  녹음한 파일을 올려주세요 
                 </h2>
                 <p>Please put on your voice record!</p>
                 <a href="File.jsp?word=<%=a %>,<%=b %>,<%=c %>,<%=d %>,<%=e %>"  data-toggle="modal" data-target="#file" id=filebtn class="btn btn-ghost btn-accent btn-large">Click</a>

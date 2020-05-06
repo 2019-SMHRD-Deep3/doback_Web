@@ -14,8 +14,11 @@ public class FindRecordCon implements Icommand {
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
 		String moveURL = null;
 		int recordnum = Integer.parseInt(request.getParameter("recordnum"));
+		String record = request.getParameter("record");
+		int wordnum = Integer.parseInt(request.getParameter("wordnum"));
 		
-		RecordDTO dto = new RecordDTO(recordnum);
+		
+		RecordDTO dto = new RecordDTO(wordnum,recordnum,record);
 		RecordDAO dao = RecordDAO.getDAO();
 		RecordDTO info = dao.findRecord(dto);
 		

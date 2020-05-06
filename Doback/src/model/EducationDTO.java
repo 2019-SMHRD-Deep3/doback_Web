@@ -10,7 +10,7 @@ public class EducationDTO {
 	private int allsim;
 	private int uk;
 	private int us;
-	private int idnum;
+
 	private int recordnum;
 	
 	public EducationDTO(int edunum) {
@@ -18,7 +18,7 @@ public class EducationDTO {
 	}
 
 	public EducationDTO(int word1, int word2, int word3, int sentence1, int sentence2, int allsim, int uk,
-			int us, int idnum, int recordnum) {
+			int us, int recordnum) {
 		super();
 		this.word1 = word1;
 		this.word2 = word2;
@@ -28,7 +28,7 @@ public class EducationDTO {
 		this.allsim = allsim;
 		this.uk = uk;
 		this.us = us;
-		this.idnum = idnum;
+
 		this.recordnum = recordnum;
 	}
 
@@ -104,13 +104,6 @@ public class EducationDTO {
 		this.us = us;
 	}
 
-	public int getIdnum() {
-		return idnum;
-	}
-
-	public void setIdnum(int idnum) {
-		this.idnum = idnum;
-	}
 
 	public int getRecordnum() {
 		return recordnum;

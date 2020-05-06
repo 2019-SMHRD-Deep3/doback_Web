@@ -13,9 +13,6 @@ public class EduHistoryDAO {
 	private ResultSet rs;
 
 	private static EduHistoryDAO dao;
-	private EduHistoryDAO() {
-		
-	}
 	
 	public static EduHistoryDAO getDAO() {
 		if(dao == null) {

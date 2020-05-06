@@ -13,9 +13,6 @@ public class EducationDAO {
 	private ResultSet rs;
 
 	private static EducationDAO dao;
-	private EducationDAO() {
-		
-	}
 	
 	public static EducationDAO getDAO() {
 		if(dao == null) {
@@ -56,7 +53,7 @@ public class EducationDAO {
 		int cnt = 0;
 		try {
 			getConnection();
-			String sql = "insert into yndeducation values(edu_seq.nextval,?,?,?,?,?,?,?,?,?,?)";
+			String sql = "insert into yndeducation values(edu_seq.nextval,?,?,?,?,?,?,?,?,?)";
 			psmt = conn.prepareStatement(sql);
 			psmt.setInt(1, dto.getWord1());
 			psmt.setInt(2, dto.getWord2());
@@ -66,8 +63,8 @@ public class EducationDAO {
 			psmt.setInt(6, dto.getAllsim());
 			psmt.setInt(7, dto.getUk());
 			psmt.setInt(8, dto.getUs());
-			psmt.setInt(9, dto.getIdnum());
-			psmt.setInt(10, dto.getRecordnum());
+
+			psmt.setInt(9, dto.getRecordnum());
 			cnt = psmt.executeUpdate();
 
 		} catch (SQLException e) {
@@ -89,7 +86,7 @@ public class EducationDAO {
 		int f_allsim;
 		int f_uk;
 		int f_us;
-		int f_idnum;
+
 		int f_recordnum;
 	   
 	    try {
@@ -108,22 +105,48 @@ public class EducationDAO {
 				f_allsim = rs.getInt("allsim");
 				f_uk = rs.getInt("uk");
 				f_us = rs.getInt("us");
-				f_idnum = rs.getInt("idnum");
+
 				f_recordnum = rs.getInt("recordnum");
 				
 				
 				info = new EducationDTO(f_word1, f_word2, f_word3, f_sentence1, f_sentence2,
-						f_allsim, f_uk, f_us, f_idnum, f_recordnum);
+						f_allsim, f_uk, f_us, f_recordnum);
 				
 			}
 		} catch (SQLException e) {
 		
 			e.printStackTrace();
 		}
-	   
-	    
-	    
 		return info;
+	}
+
+	public int insertdata(int word1, int word2, int ord3, int sentence1, int sentence2, int allstm, int uk, int us, int recordnum) {
+		
+		int cnt = 0;
+		try {
+			getConnection();
+			String sql = "insert into yndeducation values(edu_seq.nextval,?,?,?,?,?,?,?,?,?)";
+			psmt = conn.prepareStatement(sql);
+			psmt.setInt(1, word1);
+			psmt.setInt(2, word2);
+			psmt.setInt(3, ord3);
+			psmt.setInt(4, sentence1);
+			psmt.setInt(5, sentence2);
+			psmt.setInt(6, allstm);
+			psmt.setInt(7, uk);
+			psmt.setInt(8, us);
+			psmt.setInt(9, recordnum);
+			cnt = psmt.executeUpdate();
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		
+		return cnt;
+		
+		
 	}
 
 }
