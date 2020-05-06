@@ -91,6 +91,8 @@ public class VocaDAO {
 		} catch (SQLException e) {
 		
 			e.printStackTrace();
+		}finally {
+			close();
 		}
 	   
 	    

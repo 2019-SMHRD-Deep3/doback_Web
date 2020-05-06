@@ -175,7 +175,7 @@ header a.MyStudy {
 			</section>
 
 			<!--  <script>
-=======
+
                             </ul>
                             <ul class="member-actions" style=padding-top:19px;>
                                 <li><a href="Study.jsp" class="Study">학습하기</a></li>
@@ -217,7 +217,7 @@ header a.MyStudy {
 						<div class="col-md-12">
 							<h3>SECTION 1</h3>
 
-
+.
 						</div>
 
 					</div>
@@ -228,7 +228,7 @@ header a.MyStudy {
 							<h5>chic</h5>
 							<h5>she wears thick and chic shoes even though she is sick</h5>
 							<h5>I can see many trees thick with leaves around the park</h5>
-						</div>
+						</div >
 
 						<div class="col-md-6 col-sm-12 col-xs-12 rightcol">
 							<h3 id="warning">파일 업로드 시 주의 할 점</h3>

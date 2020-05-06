@@ -119,6 +119,8 @@ public class EducationDAO {
 		} catch (SQLException e) {
 		
 			e.printStackTrace();
+		}finally {
+			close();
 		}
 	   
 	    

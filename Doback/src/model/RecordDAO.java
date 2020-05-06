@@ -87,14 +87,15 @@ public class RecordDAO {
 			
 			if(rs.next()) {
 				f_record = rs.getString("record");
-				f_wordnum = rs.getInt("wordnum");
-			
-				info = new RecordDTO(f_record, f_wordnum);
+				f_wordnum = rs.getInt("wordnum");			
+				info = new RecordDTO(f_wordnum, f_record, f_wordnum, sql, f_wordnum);
 				
 			}
 		} catch (SQLException e) {
 		
 			e.printStackTrace();
+		}finally {
+			close();
 		}
 	   
 	    
