@@ -67,7 +67,14 @@
     </style>
 </head>
 
-<body id="top">
+<body id="top">        <script type="text/javascript">  </script>
+           <% 
+              String a = "sick";
+              String b="thick";
+              String c="chic";
+              String d="she wears thick and chic shoes eventhough she is sick";
+              String e="i can see many trees thick with leaves around the park";
+              %>
     <!--[if lt IE 8]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -87,7 +94,7 @@
                             <ul class="member-actions" style=padding-top:19px;>
                                 <li><a href="Study.jsp" class="Study">학습하기</a></li>
                                 <li><a href="MyStudy.jsp" class="MyStudy">나의 학습실</a></li>                               
-                                <li><a href="#download" class="Community"></a>고객센터</li>                              
+                                                        
                                 </ul>
                          
                         </nav>
@@ -106,11 +113,28 @@
                	녹음한 파일을 올려주세요 
                 </h2>
                 <p>Please put on your voice record!</p>
-                <a href="File.jsp"  data-toggle="modal" data-target="#file" class="btn btn-ghost btn-accent btn-large">Click</a>
+                <a href="File.jsp?word=<%=a %>,<%=b %>,<%=c %>,<%=d %>,<%=e %>"  data-toggle="modal" data-target="#file" id=filebtn class="btn btn-ghost btn-accent btn-large">Click</a>
                  <!-- <div class="logo-placeholder floating-logo"><img src="img/sketch-logo.png" alt="Sketch Logo"></div>  -->
             </div>
         </div>
     </section>
+    
+    <script>
+    $('a[href="#filebtn"]').click(function(event) {
+      event.preventDefault();
+ 
+      $(this).modal({
+        fadeDuration: 250
+      });
+    });
+</script>
+    
+    
+    
+    
+    
+    
+    
     <section class="blog-intro section-padding" id="blog">
         <div class="container">
             <div class="row">
@@ -119,15 +143,15 @@
                     
                    
                 </div>
-              
+      
             </div>
             <div class="row">
                 <div class="col-md-6 col-sm-12 col-xs-12 leftcol" id="word">
-                   <h5>sick</h5>
-                    <h5>thick</h5>
-                    <h5>chic</h5>
-                    <h5>she wears thick and chic shoes even though she is sick</h5>
-                    <h5>I can see many trees thick with leaves around the park</h5>
+                   <h5 class = "vocaword"><%=a %></h5>
+                    <h5 class = "vocaword"><%=b %></h5>
+                    <h5 class = "vocaword"><%=c %></h5>
+                    <h5 class = "vocaword" ><%=d %></h5>
+                    <h5 class = "vocaword"><%=e %></h5>
                 </div>
                 
                 <div class="col-md-6 col-sm-12 col-xs-12 rightcol">
