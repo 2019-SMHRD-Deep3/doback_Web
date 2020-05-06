@@ -3,19 +3,18 @@ package model;
 public class RecordDTO {
 	private int recordnum;
 	private String record;
-	private int wordnum;
+	private int vocanum;
 	private String recorddate;
 	private int idnum;
-	public RecordDTO(int recordnum, String record, int wordnum, String recorddate, int idnum) {
-		super();
+	public RecordDTO(int recordnum, String record, int vocanum, String recorddate, int idnum) {
 		this.recordnum = recordnum;
 		this.record = record;
-		this.wordnum = wordnum;
+		this.vocanum = vocanum;
 		this.recorddate = recorddate;
 		this.idnum = idnum;
 	}
-	public RecordDTO(int wordnum, int recordnum,String record) {		
-		this.wordnum = wordnum;
+	public RecordDTO(int vocanum, int recordnum,String record) {		
+		this.vocanum = vocanum;
 		this.recordnum = recordnum;
 		this.record = record;
 	}
@@ -35,10 +34,10 @@ public class RecordDTO {
 		this.record = record;
 	}
 	public int getWordnum() {
-		return wordnum;
+		return vocanum;
 	}
-	public void setWordnum(int wordnum) {
-		this.wordnum = wordnum;
+	public void setWordnum(int vocanum) {
+		this.vocanum = vocanum;
 	}
 	public String getRecorddate() {
 		return recorddate;
@@ -54,6 +53,5 @@ public class RecordDTO {
 	}
 	
 
-	
 
 }

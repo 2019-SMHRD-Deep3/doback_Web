@@ -99,10 +99,13 @@ text-align: center;
 </head>
 
 <BODY>
+	
+
+
 	<script src="http://code.jquery.com/jquery-latest.js"></script>
 
 	<script type="text/javascript">
-
+	<%String a=request.getParameter("word");%>
 
    
 
@@ -302,7 +305,10 @@ text-align: center;
 					</tbody>
 					
 				</table>
-							<input type="file" name="file"   ><br>
+							<input multiple="multiple" type="file" name="file[]"   ><br>
+							<%=a %>
+							<input type= hidden value="<%=a %>" name="wordvoca">
+
 							<input type="submit" value="¾÷·Îµå" id="uploadBtn" > 
 			</form>
 				
