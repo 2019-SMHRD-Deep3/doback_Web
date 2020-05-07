@@ -91,6 +91,8 @@ public class WordDAO {
 		} catch (SQLException e) {
 		
 			e.printStackTrace();
+		}finally {
+			close();
 		}
 	   
 	    

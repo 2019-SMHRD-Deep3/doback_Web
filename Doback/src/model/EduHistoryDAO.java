@@ -88,6 +88,8 @@ public class EduHistoryDAO {
 		} catch (SQLException e) {
 		
 			e.printStackTrace();
+		}finally {
+			close();
 		}
 	   
 	    

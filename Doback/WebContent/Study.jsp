@@ -53,7 +53,7 @@ header a.MyStudy {
 }
 
 .hero-strip {
-	margin-top: 0px;
+	margin-top: 0px;"
 	padding-top: 80px;
 	padding-bottom: 50px;
 }
@@ -94,6 +94,8 @@ header a.MyStudy {
                                 <!-- <li><a href="#assets">나의 강의실</a></li>
                                 <li><a href="#blog">Blog</a></li>
                                 <li><a href="#download">Download</a></li> -->
+
+
                             </ul>
                             <ul class="member-actions" style=padding-top:19px;>
                                 <li><a href="Study.jsp" class="Study">학습하기</a></li>

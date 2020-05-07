@@ -85,14 +85,18 @@ public class RecordDAO {
 			
 			if(rs.next()) {
 				f_record = rs.getString("record");
+
 				f_vocanum = rs.getInt("vocanum");
 				f_recordnum = rs.getInt("recordnum");
 				info = new RecordDTO(f_recordnum, f_vocanum,f_record);
+
 				
 			}
 		} catch (SQLException e) {
 		
 			e.printStackTrace();
+		}finally {
+			close();
 		}
 	   
 	    

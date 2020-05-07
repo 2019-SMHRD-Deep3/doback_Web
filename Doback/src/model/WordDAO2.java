@@ -12,4 +12,15 @@ public class WordDAO2 {
 	private PreparedStatement psmt;
 	private ResultSet rs;
 	
+	private static WordDAO2 dao;
+	private WordDAO2() {
+		
+	}
+	public static WordDAO2 getDAO2() {
+		if(dao == null) {
+			dao = new WordDAO2();
+		}
+		return dao;
+	}
+	
 }
