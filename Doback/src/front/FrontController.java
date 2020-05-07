@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import controller.FindEduHistoryCon;
-import controller.FindEducationCon;
 import controller.FindRecordCon;
 import controller.FindWordCon;
 import controller.InsertAnalysisResult;
@@ -31,9 +30,7 @@ public class FrontController extends HttpServlet {
 		map.put("JoinService.do", new JoinCon());
 		map.put("LoginService.do", new LoginCon());
 		map.put("InsertAnalysis.do", new InsertAnalysisResult());
-		
 		map.put("InsertEducation.do", new InsertEducationCon());
-		map.put("FindEducation.do", new FindEducationCon());
 		map.put("InsertEduHistory.do", new InsertEduHistoryCon());
 		map.put("FindEduHistory.do", new FindEduHistoryCon());
 		map.put("InsertRecord.do", new InsertRecordCon());

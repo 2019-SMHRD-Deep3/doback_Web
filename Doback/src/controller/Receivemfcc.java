@@ -129,7 +129,7 @@ public class Receivemfcc extends HttpServlet {
 				+ Double.parseDouble(resultUS_arr[4])) / 5);
 		cnt = educationdao.insertdata((int)word_change1, (int)word_change2,
 				(int)word_change3, (int)word_change4, (int)word_change5,
-				result_mean, resultUK_mean, resultUS_mean, recordnum0);
+				result_mean, resultUK_mean, resultUS_mean, recordnum0, id_num);
 		to_string("최종 유사도 삽입",cnt);
 		
 		/*

@@ -1,3 +1,7 @@
+<%@page import="model.EducationDTO"%>
+<%@page import="model.MemberDTO"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="model.EducationDAO"%>
 <%@page import="jdk.internal.org.objectweb.asm.tree.IntInsnNode"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
@@ -75,11 +79,22 @@ header a.MyStudy {
     <!--[if lt IE 8]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <%
+   <%
     	//dao객체 호출
     	//dao안에서 select관련 메소드 생성
-    	//받을 때는 ArrayList<DTO>    
+    	//받을 때는 ArrayList<DTO>
+    	MemberDTO mdto = (MemberDTO)session.getAttribute("info");
+   		ArrayList<EducationDTO> edtoArr = null;
+   		if(mdto != null){
+   			EducationDAO edao= new EducationDAO();
+   			edtoArr = edao.findEducation(mdto);
+   		}else{
+   			System.out.println("mdto가 null");
+   		}
+    	
     %>
+    
+    
     <section class="hero">
         <section class="navigation">
             <header>
@@ -98,7 +113,7 @@ header a.MyStudy {
                                 <li><a href="MyStudy.jsp" class="MyStudy">나의 학습실</a></li>                               
                                 <li><a href="Home.jsp" class="Logout">로그아웃</a></li>
                                
-                                </ul>
+                            </ul>
                          
                         </nav>
                     </div>
@@ -115,7 +130,55 @@ header a.MyStudy {
 						<div class="feature-list">
                 <h5>나의 발음은?</h5>
                 <h4>유사도 </h4>
+				
+				<table border=1>
+					<tr>
+					<td>sick</td>
+					<td>WORD2</td>
+					<td>WORD2</td>
+					<td>SENTENCE1</td>
+					<td>SENTENCE2</td>
+					<td>ALLSIM</td>
+					<td>US</td>
+					<td>UK</td>
+					<td>RECORDNUM</td>
 					
+					</tr>
+					<%for(int i=0 ; i<edtoArr.size(); i++){%>
+					<tr>
+						<td>
+						<%= edtoArr.get(i).getEdunum() %>
+						</td>
+						<td>
+						<%= edtoArr.get(i).getWord1() %>
+						</td>
+						<td>
+						<%= edtoArr.get(i).getWord2() %>
+						</td>
+						<td>
+						<%= edtoArr.get(i).getWord3() %>
+						</td>
+						<td>
+						<%= edtoArr.get(i).getSentence1() %>
+						</td>
+						<td>
+						<%= edtoArr.get(i).getSentence2() %>
+						</td>
+						<td>
+						<%= edtoArr.get(i).getAllsim() %>
+						</td>
+						<td>
+						<%= edtoArr.get(i).getUk() %>
+						</td>
+						<td>
+						<%= edtoArr.get(i).getUs() %>
+						</td>
+						<td>
+						<%= edtoArr.get(i).getRecordnum() %>
+						</td>
+					</tr>
+					<%} %>
+				</table>
 					
                 </div>
                 <div class="col-md-5 col-md-offset-7">

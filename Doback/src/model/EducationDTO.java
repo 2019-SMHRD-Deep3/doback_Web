@@ -11,13 +11,49 @@ public class EducationDTO {
 	private int uk;
 	private int us;
 	private int recordnum;
+	private int idnum;
 	
-	public EducationDTO(int edunum) {
+	
+	
+	public EducationDTO() {
+	}
+	
+	public EducationDTO(int edunum,int idnum) {
 		this.edunum = edunum;
+		this.idnum = idnum;
+	}
+	
+	public int getIdnum() {
+		return idnum;
 	}
 
-	public EducationDTO(int word1, int word2, int word3, int sentence1, int sentence2, int allsim, int uk,
-			int us, int recordnum) {
+
+	public void setIdnum(int idnum) {
+		this.idnum = idnum;
+	}
+
+
+	public EducationDTO(int edunum, int word1, int word2, int word3, int sentence1, int sentence2, int allsim, int uk,
+			int us, int recordnum, int idnum) {
+		super();
+		this.edunum = edunum;
+		this.word1 = word1;
+		this.word2 = word2;
+		this.word3 = word3;
+		this.sentence1 = sentence1;
+		this.sentence2 = sentence2;
+		this.allsim = allsim;
+		this.uk = uk;
+		this.us = us;
+		this.recordnum = recordnum;
+		this.idnum = idnum;
+	}
+
+
+
+
+	public EducationDTO(int word1, int word2, int word3, int sentence1, int sentence2, int allsim, int uk, int us,
+			int recordnum, int idnum) {
 		super();
 		this.word1 = word1;
 		this.word2 = word2;
@@ -28,7 +64,10 @@ public class EducationDTO {
 		this.uk = uk;
 		this.us = us;
 		this.recordnum = recordnum;
+		this.idnum = idnum;
 	}
+
+
 
 	public int getEdunum() {
 		return edunum;
@@ -110,5 +149,6 @@ public class EducationDTO {
 	public void setRecordnum(int recordnum) {
 		this.recordnum = recordnum;
 	}
+
 
 }

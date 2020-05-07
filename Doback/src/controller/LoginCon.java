@@ -30,6 +30,9 @@ public class LoginCon implements Icommand {
 		if(info != null) {
 			HttpSession session = request.getSession();
 			session.setAttribute("info", info);
+			System.out.println("로그인 성공");
+		}else {
+			System.out.println("로그인 실패");
 		}
 		if(info == null) {
 			moveURL = "Login.jsp"; //로그인 페이지 or 아이디 비번 찾기 페이지

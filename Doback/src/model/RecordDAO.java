@@ -113,7 +113,7 @@ public class RecordDAO {
 		
 		try {
 	    	getConnection();
-	 	    String sql = "insert into YNDRECORD values(REC_SEQ.nextval, ?, ?, to_char(sysdate,'yyyy-MM-dd'),?)";
+	 	    String sql = "insert into YNDRECORD values(REC_SEQ.nextval, ?,?, sysdate,?)";
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1,record);
 			psmt.setInt(2,vocanum);
