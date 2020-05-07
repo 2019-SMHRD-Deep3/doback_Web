@@ -118,9 +118,11 @@ header a.MyStudy {
                   녹음한 파일을 올려주세요 
                 </h2>
                 <p>Please put on your voice record!</p>
-                <a href="File.jsp?word=<%=a %>,<%=b %>,<%=c %>,<%=d %>,<%=e %>"  data-toggle="modal" data-target="#file" id=filebtn class="btn btn-ghost btn-accent btn-large">Click</a>
-                 <!-- <div class="logo-placeholder floating-logo"><img src="img/sketch-logo.png" alt="Sketch Logo"></div>  -->
-            </div>
+						<a href="File.jsp?word=<%=a%>,<%=b%>,<%=c%>,<%=d%>,<%=e%>"
+							data-toggle="modal" data-target="#file" id=filebtn
+							class="btn btn-ghost btn-accent btn-large">Click</a>
+						<!-- <div class="logo-placeholder floating-logo"><img src="img/sketch-logo.png" alt="Sketch Logo"></div>  -->
+					</div>
         </div>
     </section>
     

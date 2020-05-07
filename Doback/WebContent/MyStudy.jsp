@@ -1,3 +1,4 @@
+<%@page import="jdk.internal.org.objectweb.asm.tree.IntInsnNode"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
@@ -74,6 +75,11 @@ header a.MyStudy {
     <!--[if lt IE 8]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
+    <%
+    	//dao객체 호출
+    	//dao안에서 select관련 메소드 생성
+    	//받을 때는 ArrayList<DTO>    
+    %>
     <section class="hero">
         <section class="navigation">
             <header>
@@ -106,19 +112,13 @@ header a.MyStudy {
                 <section class="features section-padding" id="features">
              <div class="container">
             <div class="row">
-            	
-                <% %>
-                
-                
-              
-                <div class="col-md-5 col-md-offset-7">
-                <div class="feature-list">
+						<div class="feature-list">
                 <h5>나의 발음은?</h5>
-                <h4><%for(int i = 1; i <1000; i++){
-                	
-                	
-                } %></h4>
+                <h4>유사도 </h4>
+					
+					
                 </div>
+                <div class="col-md-5 col-md-offset-7">
                     <div class="feature-list">
                         <h3>나의 회화 분석 이력</h3>
                         <p>당신의 학습 이력을 확인해보세요:)</p>
@@ -137,8 +137,7 @@ header a.MyStudy {
                                     <span data-icon="&#xe040;" class="icon"></span>
                                 </div>
                                 <div class="feature-content">
-                                    <h5>User Centric Design</h5>
-                                    <p>Sedna takes advantage of common design patterns, allowing for a seamless experience for users of all levels.</p>
+                                
                                 </div>
                             </li>
                             <li class="feature-item">
@@ -146,8 +145,7 @@ header a.MyStudy {
                                     <span data-icon="&#xe03c;" class="icon"></span>
                                 </div>
                                 <div class="feature-content">
-                                    <h5>Clean reusable code</h5>
-                                    <p>Download and re-use the Sedna open source code for any other project you like.</p>
+                                
                                 </div>
                             </li>
                         </ul>

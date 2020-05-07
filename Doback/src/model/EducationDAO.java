@@ -63,7 +63,6 @@ public class EducationDAO {
 			psmt.setInt(6, dto.getAllsim());
 			psmt.setInt(7, dto.getUk());
 			psmt.setInt(8, dto.getUs());
-
 			psmt.setInt(9, dto.getRecordnum());
 			cnt = psmt.executeUpdate();
 
