@@ -76,6 +76,7 @@ public class MemberDAO {
 	public MemberDTO login(MemberDTO dto) {
 		MemberDTO info = null;
 		
+		int l_idnum = 0;
 		String l_id = null;
 		String l_pw = null;
 		String l_email = null;
@@ -92,13 +93,14 @@ public class MemberDAO {
 			rs = psmt.executeQuery();
 			
 			if(rs.next()) {
+				l_idnum = rs.getInt("idnum");
 				l_id = rs.getString("id");
 				l_pw = rs.getString("pw");
 				l_email = rs.getString("email");
 				l_tel = rs.getString("tel");
 				l_gender = rs.getString("gender");
 				
-				info = new MemberDTO(l_id,l_pw,l_email,l_tel,l_gender);
+				info = new MemberDTO(l_idnum,l_id,l_pw,l_email,l_tel,l_gender);
 
 				
 				

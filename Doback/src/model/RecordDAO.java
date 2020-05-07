@@ -52,11 +52,12 @@ public class RecordDAO {
 		int cnt = 0;
 		try {
 			getConnection();
-			String sql = "insert into yndrecord values(rec_seq.nextval,?,?,?)";
+			String sql = "insert into yndrecord values(rec_seq.nextval,?,?,?,?)";
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, dto.getRecord());
 			psmt.setInt(2, dto.getWordnum());
 			psmt.setString(3, dto.getRecorddate());
+			psmt.setInt(4, dto.getIdnum());
 			cnt = psmt.executeUpdate();
 
 		} catch (SQLException e) {
@@ -106,11 +107,13 @@ public class RecordDAO {
 	
 	public int insert(String record, int vocanum, int idnum) {
 		
+		System.out.println("insert_·¹ÄÚµå »ðÀÔ : "+record+"/"+vocanum+"/"+idnum);
+		
 		int cnt = 0;
 		
 		try {
 	    	getConnection();
-	 	    String sql = "insert into YNDRECORD values(REC_SEQ.nextval, ?, ?, to_char(sysdate,'yyyy.mm.dd hh24:mi'),?)";
+	 	    String sql = "insert into YNDRECORD values(REC_SEQ.nextval, ?,?, sysdate,?)";
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1,record);
 			psmt.setInt(2,vocanum);
@@ -132,7 +135,7 @@ public class RecordDAO {
 		int recordnum = 0;
 		try {
 	    	getConnection();
-	 	    String sql = "select recordnum from YNDRECORD where = ?";
+	 	    String sql = "select recordnum from YNDRECORD where record = ?";
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1,recode);
 			
