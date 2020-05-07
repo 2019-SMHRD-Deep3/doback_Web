@@ -23,6 +23,7 @@ public class LoginCon implements Icommand {
 		String id = request.getParameter("id");
 		String pw = request.getParameter("pw");
 		
+		
 		MemberDTO dto = new MemberDTO(id,pw);
 		MemberDAO dao = MemberDAO.getDAO();
 		MemberDTO info = dao.login(dto);
