@@ -21,6 +21,10 @@ public class RecordDTO {
 	
 
 
+	public RecordDTO(String record, int vocanum) {
+		this.record = record;
+		this.vocanum = vocanum;
+	}
 	public int getRecordnum() {
 		return recordnum;
 	}

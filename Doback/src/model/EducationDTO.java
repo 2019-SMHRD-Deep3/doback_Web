@@ -10,7 +10,6 @@ public class EducationDTO {
 	private int allsim;
 	private int uk;
 	private int us;
-
 	private int recordnum;
 	
 	public EducationDTO(int edunum) {
@@ -28,7 +27,6 @@ public class EducationDTO {
 		this.allsim = allsim;
 		this.uk = uk;
 		this.us = us;
-
 		this.recordnum = recordnum;
 	}
 

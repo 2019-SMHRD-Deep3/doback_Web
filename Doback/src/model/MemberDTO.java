@@ -22,6 +22,16 @@ public class MemberDTO {
 		this.pw = pw;
 	}
 
+	public MemberDTO(int idnum, String id, String pw, String email, String tel, String gender) {
+		super();
+		this.idnum = idnum;
+		this.id = id;
+		this.pw = pw;
+		this.email = email;
+		this.tel = tel;
+		this.gender = gender;
+	}
+
 	public MemberDTO(int idnum, String pw, String email, String tel) {//회원정보수정
 		super();
 		this.idnum = idnum;
@@ -29,6 +39,7 @@ public class MemberDTO {
 		this.email = email;
 		this.tel = tel;
 	}
+
 
 	public int getIdnum() {
 		return idnum;
