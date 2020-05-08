@@ -86,7 +86,7 @@ header a.MyStudy {
         <section class="navigation">
             <header>
                 <div class="header-content">
-                    <div class="logo"><a href="LoginSuccessHome.jsp"><img src="logo4.png" alt="Sedna logo" border="3px" width="100px" height="80px"></a></div>
+                    <div class="logo"><a href="LoginSuccessHome.jsp"><img src="logo5.png" alt="Sedna logo" border="3px" width="100px" height="80px"></a></div>
                     <div class="header-nav">
                         <nav>
                             <ul class="primary-nav">
