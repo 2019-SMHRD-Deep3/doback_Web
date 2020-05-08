@@ -36,6 +36,10 @@ header a.Join {
 header a.login {
 	margin-right: 20px;
 }
+header {
+   
+    padding:0px !important; 
+}
 
 .hero {
 	min-height: 950px;
@@ -79,6 +83,10 @@ margin-right:200px;
 
 #US{
 margin-right:300px;
+}
+#title{
+padding-top:250px;
+}
 
 
 /* div .typed {
@@ -149,11 +157,11 @@ div .row > .typed-cursor  {
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 	<section class="hero">
-		<section class="navigation">
-			<header>
+		<section class="navigation" style="">
+			<header >
 				<div class="header-content">
 					<div class="logo">
-						<a href="Home.jsp"><img src="logo5.png" alt="Sedna logo" border="3px" width="100px" height="80px"></a>
+						<a href="Home.jsp" ><img src="logo5.png" alt="Sedna logo" border="3px" width="160px" height="120px"></a>
 					</div>
 					<div class="header-nav">
 						<nav>
@@ -183,9 +191,10 @@ div .row > .typed-cursor  {
 			<div class="row">
 				<div class="col-md-10 col-md-offset-1">
 					<div class="hero-content text-center" id="title">
-						<h1>원어민과의 영어 발음 유사도 측정서비스</h1><br>
-						<p class="intro">Let's start to measure your English pronounce with us.</p>
-						<a href="#" class="btn btn-accent btn-large" data-toggle="modal" data-target="#myModal">측정 해보기</a>
+						<h1>딥러닝이 판단하는</h1>
+						<h1> 원어민과 나의 발음 유사도는?</h1><br>
+						<p class="intro">Let's start to measure native speaker and my English pronunciation similarity service</p>
+						<a href="#" class="btn btn-accent btn-large" data-toggle="modal" data-target="#myModal" style="font-size: 20px">측정 해보기</a>
 					</div>
 				</div>
 			</div>
@@ -194,12 +203,12 @@ div .row > .typed-cursor  {
 		<!--모달창  -->
 		   
  
-      <!--로그인 이용 모달창 -->
+      <!--로그인 이용 모달창 -->s
        <div id="myModal" class="modal">
       <div class="modal-content">
                 <p style="text-align: center;"><span style="font-size: 14pt;"><b><span style="font-size: 24pt;">로그인시 이용가능합니다.</span></b></span></p>
                 
-            <div style="cursor:pointer;background-color:#DDDDDD;text-align: center;padding-bottom: 10px;padding-top: 10px;" onClick="close_pop();">
+            <div style="cursor:pointer;background-color:#DDDDDD;text-align: center;padding-bottom: 30px;padding-top: 10px;" onClick="close_pop();">
                 <span class="pop_bt" style="font-size: 13pt;" >
                      닫기
                 </span>
@@ -227,7 +236,7 @@ div .row > .typed-cursor  {
 	
 
 		<div class="down-arrowfloating-arrow"
-			style="text-align: center; margin-top: 150px; font-size: 50px;">
+			style="text-align: center; margin-top: 100px; font-size: 50px;">
 			<a href="#assets"><i class="fa fa-angle-down"></i></a>
 		</div>
 		
