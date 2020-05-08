@@ -68,6 +68,7 @@ background-color: #EBF5FF;
 }
 #usuk{
 font-size: 50px;
+margin-bottom:150px;
 }
 #commu{
 margin-right:200px;
@@ -75,9 +76,9 @@ margin-right:200px;
 #speaking{
 margin-right:200px;
 }
+
 #US{
 margin-right:300px;
-}
 
 
 /* div .typed {
@@ -298,24 +299,29 @@ div .row > .typed-cursor  {
 		<section class="features-extra section-padding" id="assets2">
 		<div class="container">
 
-			<div class="row" align="center">
+			<div class="row" align="center" style="margin-bottom: 150px; margin-top:100px;">
 
-					<h1 id="usuk" >당신의 발음은 US / UK 어느 쪽에 더 가까울까요?</h1>
+					<h1 id="usuk">당신의 발음은 US / UK 어느 쪽에 더 가까울까요?</h1>
+				
 				<table>
 <tr>
 					<td><div class="intro-content" id="US">
 					<img src="US.png" alt="Sedna logo" border="3px" width="200px" height="160px" > <br><br>
-						<h3>미국 발음</h3>
+						<h3 style="margin-left: 30px">미국식 발음</h3>
 					</div></td>
 
 					<td><div class="intro-content" id="UK">
 					<img src="UK.png" alt="Sedna logo" border="3px" width="200px" height="160px"> <br><br>
-						<h3>영국 발음</h3>
+						<h3 style="margin-left: 30px">영국식 발음</h3>
 					</div></td>
 
 					</tr>
 					</table>
 					</div>
+						<div class="down-arrowfloating-arrow"
+				style="text-align: center; font-size: 50px;">
+				<a href="#assets2"><i class="fa fa-angle-down"></i></a>
+			</div>
 					</div>
 
 	</section>
