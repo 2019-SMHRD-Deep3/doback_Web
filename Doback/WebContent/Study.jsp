@@ -120,7 +120,7 @@ header a.MyStudy {
         <div class="container">
             <div class="col-md-12 text-center">
                 <h2>
-                  <%=info.getIdnum() %>녹음한 파일을 올려주세요 
+                 녹음한 파일을 올려주세요 
                 </h2>
                 <p>Please put on your voice record!</p>
 						<a href="File.jsp?word=<%=a%>,<%=b%>,<%=c%>,<%=d%>,<%=e%>"

@@ -27,15 +27,19 @@ public class Receivemfcc extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// flask 이용시 주석풀기
-      String result = request.getParameter("result");
+		HttpSession session = request.getSession();
+		String result = request.getParameter("result");
       String resultUK = request.getParameter("resultUK");
       String resultUS = request.getParameter("resultUS");
       String record = request.getParameter("record");
       String word1 = request.getParameter("word");
       String id_num1 = request.getParameter("user");
-      System.out.println(id_num1);
+      
+//      System.out.println(id_num1);
 //      double id_num2 = Double.parseDouble(id_num1);
       int id_num = Integer.parseInt(id_num1);
+      MemberDTO idnumdto = new MemberDTO(id_num);
+      session.setAttribute("info", idnumdto);
 		int cnt = 0;
 		// 예시문
 		/*
@@ -57,12 +61,12 @@ public class Receivemfcc extends HttpServlet {
 		String[] record_arr = record.split(",");
 		String[] word_arr = word1.split(",");
 		String[] arr = new String[5];
-		
-		System.out.println(result_arr[0]);
-		System.out.println(result_arr[1]);
-		System.out.println(result_arr[2]);
-		System.out.println(result_arr[3]);
-		System.out.println(result_arr[4]);
+//		
+//		System.out.println(result_arr[0]);
+//		System.out.println(result_arr[1]);
+//		System.out.println(result_arr[2]);
+//		System.out.println(result_arr[3]);
+//		System.out.println(result_arr[4]);
 
 		// EducationDTO dto = new EducationDTO(result, resultUK, resultUS, record,
 		// word1);
@@ -76,18 +80,18 @@ public class Receivemfcc extends HttpServlet {
 		int vocanum2 = vocadao.findVocaNum(word_arr[2]);
 		int vocanum3 = vocadao.findVocaNum(word_arr[3]);
 		int vocanum4 = vocadao.findVocaNum(word_arr[4]);
-	System.out.println(word_arr[0]);
-	System.out.println(word_arr[1]);
-	System.out.println(word_arr[2]);
-	System.out.println(word_arr[3]);
-	System.out.println(word_arr[4]);
-		
-		System.out.println(word1);
-      System.out.println("0--"+vocanum0);
-      System.out.println("1--"+vocanum1);
-      System.out.println("2--"+vocanum2);
-      System.out.println("3--"+vocanum3);
-      System.out.println("4--"+vocanum4);
+//	System.out.println(word_arr[0]);
+//	System.out.println(word_arr[1]);
+//	System.out.println(word_arr[2]);
+//	System.out.println(word_arr[3]);
+//	System.out.println(word_arr[4]);
+//		
+//		System.out.println(word1);
+//      System.out.println("0--"+vocanum0);
+//      System.out.println("1--"+vocanum1);
+//      System.out.println("2--"+vocanum2);
+//      System.out.println("3--"+vocanum3);
+//      System.out.println("4--"+vocanum4);
 
 		// 각각의 유사도
 		double word_change1 = Double.parseDouble(result_arr[0]);
@@ -103,26 +107,26 @@ public class Receivemfcc extends HttpServlet {
 //     System.out.println(word_change5);
 
 		// 아이디 넘버 가져오기
-		 HttpSession session = request.getSession();
+		 
 		 MemberDTO id_dto = (MemberDTO) session.getAttribute("info");
 		// int id_num = id_dto.getIdnum();
-
+		
 		//int id_num = 1; // 일단 임의로 설정
 
 		// YNDRECORD 추가
 		RecordDAO recorddao = new RecordDAO();
-        System.out.println("레코드 삽입 : "+record_arr[0]+"/"+vocanum0+"/"+id_num);
+        //System.out.println("레코드 삽입 : "+record_arr[0]+"/"+vocanum0+"/"+id_num);
         
 		cnt = recorddao.insert(record_arr[0], vocanum0, id_num);
-		to_string("레코드0", cnt);
+		//to_string("레코드0", cnt);
 		cnt = recorddao.insert(record_arr[1], vocanum1, id_num);
-		to_string("레코드1", cnt);
+		//to_string("레코드1", cnt);
 		cnt = recorddao.insert(record_arr[2], vocanum2, id_num);
-		to_string("레코드2", cnt);
+		//to_string("레코드2", cnt);
 		cnt = recorddao.insert(record_arr[3], vocanum3, id_num);
-		to_string("레코드3", cnt);
+		//to_string("레코드3", cnt);
 		cnt = recorddao.insert(record_arr[4], vocanum4, id_num);
-		to_string("레코드4", cnt);
+		//to_string("레코드4", cnt);
 
 		// YNDRECORD RECORDNUM select
 		int recordnum0 = recorddao.select(record_arr[0]);
@@ -146,7 +150,7 @@ public class Receivemfcc extends HttpServlet {
 		cnt = educationdao.insertdata((int)word_change1, (int)word_change2,
 				(int)word_change3, (int)word_change4, (int)word_change5,
 				result_mean, resultUK_mean, resultUS_mean, recordnum0, id_num);
-		to_string("최종 유사도 삽입",cnt);
+		//to_string("최종 유사도 삽입",cnt);
 		
 		/*
 		 * HttpSession session = request.getSession(); session.setAttribute("sick",
@@ -156,6 +160,8 @@ public class Receivemfcc extends HttpServlet {
 		 * session.setAttribute("mean", result_mean ); session.setAttribute("UK",
 		 * resultUK_mean ); session.setAttribute("US", resultUS_mean );
 		 */
+		System.out.println("cnt : "+cnt);
+		response.sendRedirect("MyStudy.jsp");
 	}
 
 	public void to_string(String word, int cnt) {

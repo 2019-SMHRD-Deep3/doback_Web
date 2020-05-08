@@ -123,7 +123,8 @@ header a.login {
 								<!-- <li><a href="#assets" class="btn-white btn-small"
 									style="padding-right: 19px; padding-left: 19px;">야너두 소개</a></li> -->
 								<!-- <li><a href="#assets">나의 강의실</a></li>
-                                <li><a href="#blog">Blog</a></li>
+                                <li><a hre
+                                f="#blog">Blog</a></li>
                                 <li><a href="#download">Download</a></li> -->
 							</ul>
 							<ul class="member-actions" style="padding-top: 19px;">
@@ -145,7 +146,7 @@ header a.login {
 			<div class="row">
 				<div class="col-md-10 col-md-offset-1">
 					<div class="hero-content text-center" id="title">
-						<h1>원어민과의 영어 발음 유사도 측정서비스</h1><br>
+						<h1>딥러닝이 판단하는 나의 원어민과의 발음 유사도는 ?</h1><br>
 						<p class="intro">Let's start to measure your English pronounce with us.</p>
 						<a href="#" class="btn btn-accent btn-large" data-toggle="modal" data-target="#myModal">측정 해보기</a>
 					</div>
