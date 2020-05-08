@@ -98,12 +98,14 @@ public class VocaDAO {
 	    
 		try {
 	    	getConnection();
+	    	System.out.println("vocaDAO :"+s);
 	 	    String sql = "select vocanum from YNDVOCA where voca=?";
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1,s);
 			rs = psmt.executeQuery();
 			
 			if(rs.next()) {
+				System.out.println("vocaDAO µé¾î¿È :"+s);
 				vocanum = rs.getInt(1);
 			}
 		} catch (SQLException e) {

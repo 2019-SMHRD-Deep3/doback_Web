@@ -25,6 +25,7 @@
 <link rel="stylesheet" href="bower_components/animate.css/animate.min.css">
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+<!-- <script src="js/vendor/jquery-1.11.2.min.js"></script> -->
 
 
 <style>
@@ -53,7 +54,7 @@ header a.login {
 }
 
 .hero-strip {
-	margin-top: 0px;
+	margin-top: 0px; 
 	padding-top: 80px;
 	padding-bottom: 50px;
 }
@@ -62,7 +63,44 @@ header a.login {
 	padding-top: 50px;
 	padding-bottom: 150px;
 }
+#assets2{
+background-color: #EBF5FF;
+}
+#usuk{
+font-size: 50px;
+}
+#commu{
+margin-right:200px;
+}
+#speaking{
+margin-right:200px;
+}
+#US{
+margin-right:300px;
+}
 
+
+/* div .typed {
+	display: inline-block;
+	margin: 0;
+}
+
+div .typed-cursor {
+	font-size: 60px;
+	display: inline-block;
+	margin: 0 10px;
+	color: #00a8ff;
+	-webkit-animation-name: flash;
+	animation-name: flash;
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+}
+
+div .row > .typed-cursor  {
+		display: none;
+	} */
  /* The Modal (background) */
         .modal {
             display: none; /* Hidden by default */
@@ -114,8 +152,7 @@ header a.login {
 			<header>
 				<div class="header-content">
 					<div class="logo">
-						<a href="Home.jsp"><img src="img/sedna-logo.png"
-							alt="Sedna logo"></a>
+						<a href="Home.jsp"><img src="logo5.png" alt="Sedna logo" border="3px" width="100px" height="80px"></a>
 					</div>
 					<div class="header-nav">
 						<nav>
@@ -187,103 +224,108 @@ header a.login {
       </script>
       
     
-		<!--로그인 모달  -->
-		<!--  <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content modal-popup">
-				<a href="#" class="close-link"><i class="icon_close_alt2"></i></a>
-				<h3 class="white">로그인</h3>
-				<form action="" class="popup-form">
-					<input type="text" class="form-control form-white" placeholder="아이디 입력">
-					<input type="text" class="form-control form-white" placeholder="비밀번호 입력">
-					
-					<div class="checkbox-holder text-left">
-						<div class="checkbox">
-							<input type="checkbox" value="None" id="squaredOne" name="check" />
-							<label for="squaredOne"><span>I Agree to the <strong>Terms &amp; Conditions</strong></span></label>
-						</div>
-					</div>
-					<button type="submit" class="btn btn-submit">Submit</button>
-				</form>
-			</div>
-		</div>
-		</div>
-		회원가입 모달 
-		<div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content modal-popup">
-				<a href="#" class="close-link"><i class="icon_close_alt2"></i></a>
-				<h3 class="white">회원가입</h3>
-				<form action="" class="popup-form">
-					<input type="text" class="form-control form-white" placeholder="아이디 입력">
-					<input type="text" class="form-control form-white" placeholder="비밀번호 입력">
-					<input type="text" class="form-control form-white" placeholder="아메일 입력">
-					<input type="text" class="form-control form-white" placeholder="전화번호 입력">
-					<input type="text" class="form-control form-white" placeholder="성별">
-					<div class="dropdown">
-						<button id="dLabel" class="form-control form-white dropdown" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							Pricing Plan
-						</button>
-						<ul class="dropdown-menu animated fadeIn" role="menu" aria-labelledby="dLabel">
-							<li class="animated lightSpeedIn"><a href="#">1 month membership ($150)</a></li>
-							<li class="animated lightSpeedIn"><a href="#">3 month membership ($350)</a></li>
-							<li class="animated lightSpeedIn"><a href="#">1 year membership ($1000)</a></li>
-							<li class="animated lightSpeedIn"><a href="#">Free trial class</a></li>
-						</ul>
-					</div>
-					<div class="checkbox-holder text-left">
-						<div class="checkbox">
-							<input type="checkbox" value="None" id="squaredOne" name="check" />
-							<label for="squaredOne"><span>I Agree to the <strong>Terms &amp; Conditions</strong></span></label>
-						</div>
-					</div>
-					<button type="submit" class="btn btn-submit">Submit</button>
-				</form>
-			</div>
-		</div>
-		</div>
-		 -->
-		 <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content modal-popup">
-				<a href="#" class="close-link"><i class="icon_close_alt2"></i></a>
-				<h3 class="white">아이디/비번 찾기</h3>
-				<form action="" class="popup-form">
-					<input type="text" class="form-control form-white" placeholder="아이디 입력">
-					<input type="text" class="form-control form-white" placeholder="비밀번호 입력">
-					<input type="text" class="form-control form-white" placeholder="아메일 입력">
-					<input type="text" class="form-control form-white" placeholder="전화번호 입력">
-					<input type="text" class="form-control form-white" placeholder="성별">
-					<div class="dropdown">
-						<button id="dLabel" class="form-control form-white dropdown" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							Pricing Plan
-						</button>
-						<ul class="dropdown-menu animated fadeIn" role="menu" aria-labelledby="dLabel">
-							<li class="animated lightSpeedIn"><a href="#">1 month membership ($150)</a></li>
-							<li class="animated lightSpeedIn"><a href="#">3 month membership ($350)</a></li>
-							<li class="animated lightSpeedIn"><a href="#">1 year membership ($1000)</a></li>
-							<li class="animated lightSpeedIn"><a href="#">Free trial class</a></li>
-						</ul>
-					</div>
-					<div class="checkbox-holder text-left">
-						<div class="checkbox">
-							<input type="checkbox" value="None" id="squaredOne" name="check" />
-							<label for="squaredOne"><span>I Agree to the <strong>Terms &amp; Conditions</strong></span></label>
-						</div>
-					</div>
-					<button type="submit" class="btn btn-submit">Submit</button>
-				</form>
-			</div>
-		</div>
-		</div>
-		<!--모달창 여기까지  -->
+	
 
 		<div class="down-arrowfloating-arrow"
 			style="text-align: center; margin-top: 150px; font-size: 50px;">
 			<a href="#assets"><i class="fa fa-angle-down"></i></a>
 		</div>
+		
+		
+		
+		
+		
 	</section>
+	
+	
+	<!-- 섹션 1  -->
 	<section class="features-extra section-padding" id="assets">
+		<div class="container">
+
+			<div class="row" align="center">
+					<h1 id="typing"></h1>
+					<script>
+					var x = "당신의 발음은 원어민과 얼마나 유사할까요?" 
+				    var i =0;
+					function typeWriter(){
+						if(i < x.length){
+							document.getElementById("typing").innerHTML += x[i];
+							i++;
+							setTimeout(typeWriter,200);
+						}
+					}typeWriter();
+					</script><br>
+				
+						<h3>왜 영어 발음이 중요할까요?</h3> <br><br><br><br>
+						
+
+<table>
+<tr>
+					<td><div class="intro-content" id="commu">
+					<img src="commu.png" alt="Sedna logo" border="3px" width="200px" height="160px" > <br><br>
+						<h3>정확한 의미 전달</h3>
+						
+					</div></td>
+
+					
+
+					<td><div class="intro-content" id="speaking">
+					<img src="speaking.png" alt="Sedna logo" border="3px" width="200px" height="160px"> <br><br>
+						<h3>말하기 자신감</h3>
+						
+					</div></td>
+							
+							<td><div class="intro-content">
+					<img src="hearing.png" alt="Sedna logo" border="3px" width="200px" height="160px"> <br><br>
+						<h3>듣기 실력 향상</h3>
+						
+					</div></td>
+					
+					</tr>
+					</table>
+
+				</div>
+
+			</div>
+			<div class="down-arrowfloating-arrow"
+				style="text-align: center; margin-top:100px; margin-bottom:100px; font-size: 50px;">
+				<a href="#assets2"><i class="fa fa-angle-down"></i></a>
+			</div>
+		</div>
+
+	</section>
+	
+	<!--섹션 2 -->
+		<section class="features-extra section-padding" id="assets2">
+		<div class="container">
+
+			<div class="row" align="center">
+
+					<h1 id="usuk" >당신의 발음은 US / UK 어느 쪽에 더 가까울까요?</h1>
+				<table>
+<tr>
+					<td><div class="intro-content" id="US">
+					<img src="US.png" alt="Sedna logo" border="3px" width="200px" height="160px" > <br><br>
+						<h3>미국 발음</h3>
+					</div></td>
+
+					<td><div class="intro-content" id="UK">
+					<img src="UK.png" alt="Sedna logo" border="3px" width="200px" height="160px"> <br><br>
+						<h3>영국 발음</h3>
+					</div></td>
+
+					</tr>
+					</table>
+					</div>
+					</div>
+
+	</section>
+	
+	
+	
+	<!-- 섹션 3  -->
+	
+		<section class="features-extra section-padding" id="assets3">
 		<div class="container">
 
 			<div class="row" align="center">
@@ -295,7 +337,7 @@ header a.login {
 					</div>
 
 					<div class="intro-content">
-						<h5>1. 화면의 단어와 문장을 보고 한 번 따라해보세요!</h5>
+						<h5>소개페이지 3</h5>
 						<p>Easily customise Sedna to suit your start up, portfolio or
 							product. Take advantage of the layered Sketch file and bring your
 							product to life.</p>
@@ -307,8 +349,7 @@ header a.login {
 
 					<div class="intro-content">
 						<h5>2. 이제 녹음을 합니다!</h5>
-						<p>Designed with modern trends and techniques in mind, Sedna
-							will help your product stand out in an already saturated market.</p>
+						<p><img src="UK.png" alt="Sedna logo" border="3px" width="100px" height="80px"></p>
 					</div>
 
 					<div class="intro-icon">

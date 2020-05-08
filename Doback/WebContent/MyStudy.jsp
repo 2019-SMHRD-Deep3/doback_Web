@@ -82,6 +82,7 @@ table {
 
 .hero h1 {
    color: black;
+
 }
 </style>
 </head>
@@ -90,34 +91,36 @@ table {
    <!--[if lt IE 8]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-   <%
-      //dao객체 호출
-      //dao안에서 select관련 메소드 생성
-      //받을 때는 ArrayList<DTO>
-      MemberDTO mdto = (MemberDTO) session.getAttribute("info");
-      ArrayList<EducationDTO> edtoArr = null;
-      if (mdto != null) {
-         EducationDAO edao = new EducationDAO();
-         edtoArr = edao.findEducation(mdto);
-      } else {
-         System.out.println("mdto가 null");
-      }
-   %>
+
+	<%
+		//dao객체 호출
+		//dao안에서 select관련 메소드 생성
+		//받을 때는 ArrayList<DTO>
+		MemberDTO mdto = (MemberDTO) session.getAttribute("info");
+		ArrayList<EducationDTO> edtoArr = null;
+		if (mdto != null) {
+			EducationDAO edao = new EducationDAO();
+			edtoArr = edao.findEducation(mdto);
+		} else {
+			System.out.println("mdto가 null");
+		}
+	%>
 
 
-   <section class="hero">
-      <section class="navigation">
-         <header>
-            <div class="header-content">
-               <div class="logo">
-                  <a href="LoginSuccessHome.jsp"><img src="img/sedna-logo.png"
-                     alt="Sedna logo"></a>
-               </div>
-               <div class="header-nav">
-                  <nav>
-                     <ul class="primary-nav">
-                        <!-- <li><a href="#assets" class="btn-white btn-small" style=padding-right:19px;padding-left:19px;>소개</a></li> -->
-                        <!-- <li><a href="#assets">나의 강의실</a></li>
+	<section class="hero">
+		<section class="navigation">
+			<header>
+				<div class="header-content">
+					<div class="logo">
+						<a href="LoginSuccessHome.jsp"><img src="img/sedna-logo.png"
+							alt="Sedna logo"></a>
+					</div>
+					<div class="header-nav">
+						<nav>
+							<ul class="primary-nav">
+								<!-- <li><a href="#assets" class="btn-white btn-small" style=padding-right:19px;padding-left:19px;>소개</a></li> -->
+								<!-- <li><a href="#assets">나의 강의실</a></li>
+
                                 <li><a href="#blog">Blog</a></li>
                                 <li><a href="#download">Download</a></li> -->
                      </ul>
@@ -325,6 +328,7 @@ table {
       });
       
    </script>
+
 
 </body>
 </html>
