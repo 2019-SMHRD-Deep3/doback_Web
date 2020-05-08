@@ -90,6 +90,7 @@ table {
 	<!--[if lt IE 8]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
+
 	<%
 		//dao객체 호출
 		//dao안에서 select관련 메소드 생성
@@ -118,6 +119,7 @@ table {
 							<ul class="primary-nav">
 								<!-- <li><a href="#assets" class="btn-white btn-small" style=padding-right:19px;padding-left:19px;>소개</a></li> -->
 								<!-- <li><a href="#assets">나의 강의실</a></li>
+
                                 <li><a href="#blog">Blog</a></li>
                                 <li><a href="#download">Download</a></li> -->
 							</ul>
@@ -139,7 +141,12 @@ table {
 			</header>
 			<section class="features section-padding" id="features">
 				<div class="container">
-					<div class="row">
+				<div class="row" style="width: 50% !important; float:left;">
+				<h4>님의 유사도는</h4>
+				<h4><h1>99%</h1>입니다.</h4>
+				</div>
+				
+					<div class="row" style="width: 50% !important; float:right;">
 						<h1>유사도</h1>
 						<!-- <div class="feature-list">
 							<h1>유사도</h1> -->
@@ -160,6 +167,7 @@ table {
 							</thead>
 							<tbody>
 								<%
+									
 									for (int i = 0; i < edtoArr.size(); i++) {
 								%>
 								<tr>
@@ -247,9 +255,7 @@ table {
 						var data = google.visualization.arrayToDataTable([
 								[ "Element", "Density", {
 									role : "style"} ],
-								[ "sick", parseInt(word1), "silver" ], [ "thick", parseInt(word2), "gold" ],
-								[ "chic", parseInt(word3), "#b87333" ], [ "문장1", parseInt(sentence1), "silver" ], [ "문장2", parseInt(sentence2), "gold" ],
-								[ "전체유사도", parseInt(allsim), "#b87333" ], [ "영국", parseInt(uk), "silver" ], [ "미국", parseInt(us), "gold" ] ]);
+								 [ "영국", parseInt(uk), "silver" ], [ "미국", parseInt(us), "gold" ] ]);
 
 						var view = new google.visualization.DataView(data);
 						view.setColumns([ 0, 1, {

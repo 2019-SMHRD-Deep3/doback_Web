@@ -54,7 +54,7 @@ header a.MyStudy {
 }
 
 .hero-strip {
-	margin-top: 0px;"
+	margin-top: 0px;"\
 	padding-top: 80px;
 	padding-bottom: 50px;
 }
@@ -89,7 +89,7 @@ header a.MyStudy {
         <section class="navigation">
             <header>
                 <div class="header-content">
-                    <div class="logo"><a href="LoginSuccessHome.jsp"><img src="img/sedna-logo.png" alt="Sedna logo"></a></div>
+                    <div class="logo"><a href="LoginSuccessHome.jsp"><img src="logo5.png" alt="Sedna logo" border="3px" width="100px" height="80px"></a></div>
                     <div class="header-nav">
                         <nav>
                             <ul class="primary-nav">
