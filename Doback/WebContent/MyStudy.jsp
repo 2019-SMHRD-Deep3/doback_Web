@@ -236,7 +236,7 @@ table {
 							+ uk + "</font>" + ", 미국 : <font color='red'>" + us
 							+ "</font>";
 
-					$("#ex1_Result1").html(" * 클릭한 Row의 모든 데이터 = " + str);
+					$("#ex1_Result1").html("전체 유사도 결과 = " + str);
 					
 					// 구글 차트
 					google.charts.load("current", {
@@ -247,7 +247,7 @@ table {
 						var data = google.visualization.arrayToDataTable([
 								[ "Element", "Density", {
 									role : "style"} ],
-								 [ "sick", parseInt(word1), "silver" ], [ "thick", parseInt(word2), "gold" ],
+								[ "sick", parseInt(word1), "silver" ], [ "thick", parseInt(word2), "gold" ],
 								[ "chic", parseInt(word3), "#b87333" ], [ "문장1", parseInt(sentence1), "silver" ], [ "문장2", parseInt(sentence2), "gold" ],
 								[ "전체유사도", parseInt(allsim), "#b87333" ], [ "영국", parseInt(uk), "silver" ], [ "미국", parseInt(us), "gold" ] ]);
 
