@@ -1,6 +1,6 @@
 <%@page import="model.MemberDTO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+   pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <HTML>
 <head>
@@ -25,92 +25,101 @@
 <link rel="stylesheet" href="css/queries.css">
 <link rel="stylesheet" href="css/etline-font.css">
 <link rel="stylesheet"
-	href="bower_components/animate.css/animate.min.css">
+   href="bower_components/animate.css/animate.min.css">
 <link rel="stylesheet"
-	href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+   href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 
 <style>
+body {
+	background-image: url("filebackground.PNG");
+}
 header a.Study {
-	margin-right: 20px;
+   margin-right: 20px;
 }
 
 .hero {
-	min-height: 950px;
+   min-height: 950px;
 }
-
+8
 .hero .hero-content {
-	padding-top: 40%;
+   padding-top: 40%;
 }
 
 .section-padding {
-	padding-top: 100px;
-	padding-bottom: 100px;
+   padding-top: 100px;
+   padding-bottom: 100px;
 }
 
 .intro {
-	padding-top: 50px;
+   padding-top: 50px;
 }
 
 .hero-strip {
-	margin-top: 0px;
-	padding-top: 80px;
-	padding-bottom: 50px;
+   margin-top: 0px;
+   padding-top: 80px;
+   padding-bottom: 50px;
 }
 
 .blog-intro {
-	padding-top: 50px;
-	padding-bottom: 150px;
+   padding-top: 50px;
+   padding-bottom: 150px;
 }
 
 .container {
-	color: red;
+   color: red;
 }
 
 #word>h5 {
-	margin-bottom: 30px;
+   margin-bottom: 30px;
 }
 
 .modal {
-	display: none; /* Hidden by default */
-	position: fixed; /* Stay in place */
-	z-index: 1; /* Sit on top */
-	left: 0;
-	top: 0;
-	width: 100%; /* Full width */
-	height: 100%; /* Full height */
-	overflow: auto; /* Enable scroll if needed */
-	background-color: rgb(0, 0, 0); /* Fallback color */
-	background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+   display: none; /* Hidden by default */
+   position: fixed; /* Stay in place */
+   z-index: 1; /* Sit on top */
+   left: 0;
+   top: 0;
+   width: 100%; /* Full width */
+   height: 100%; /* Full height */
+   overflow: auto; /* Enable scroll if needed */
+   background-color: rgb(0, 0, 0); /* Fallback color */
+   background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
 /* Modal Content/Box */
 .modal-content {
-	background-color: #fefefe;
-	margin: 15% auto; /* 15% from the top and centered */
-	padding: 20px;
-	border: 1px solid #888;
-	width: 30%; /* Could be more or less, depending on screen size */
+   background-color: #fefefe;
+   margin: 15% auto; /* 15% from the top and centered */
+   padding: 20px;
+   border: 1px solid #888;
+   width: 30%; /* Could be more or less, depending on screen size */
 }
 #uploadBtn{
 text-align: center;
  }
+ 
+  .pop_bt{
+ background: url("close.png"") no-repeat 0 0.25em; white-space:nowrap;margin-left:500px;	
+ }
+
 
 </style>
 </head>
 
 <BODY>
+   <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+   <script type="text/javascript">
 	
 <% MemberDTO info = (MemberDTO)session.getAttribute("info"); %>
 
-	<script src="http://code.jquery.com/jquery-latest.js"></script>
-
-	<script type="text/javascript">
-	<%String a=request.getParameter("word");%>
 
    
 
+   <%String a = request.getParameter("word");%>
 
+   
  
     // 파일 리스트 번호
     var fileIndex = 0;
@@ -289,55 +298,46 @@ text-align: center;
         }
     }
 </script>
-	<div id="file" class="modal">
-		<div class="modal-content">
-			<p style="text-align: center;">
-				<span style="font-size: 14pt;"><b><span
-						style="font-size: 24pt;">File Drop</span></b></span>
-			</p>
-			<form  action="http://172.30.1.5:9000/test" method="post" enctype="multipart/form-data" name="uploadForm" id="uploadForm" >
-				<table class="table" width="100%" border="1px">
-					<tbody id="fileTableTbody">
-						<tr>
-							<td id="dropZone">파일을 드래그 하세요</td>
-							
-						</tr>
-						
-					</tbody>
-					
-				</table>
-							<input multiple="multiple" type="file" name="file[]"   ><br>
+   <div id="file" class="modal">
+   
+      <div class="modal-content">
+      <a href="Study.jsp">
+           <!-- <div style=" cursor: pointer; background-color:opacity; text-align: right; padding-bottom: 10px; padding-top: 10px; margin-left:50px" onClick="close_pop();"> -->
+              
+               <img class="pop_bt" src="close.png" align="right" width="20px" height="20px" "onclick= "close_pop(); ">
+           <!-- </div> -->
+         </a>
+         <p style="text-align: center;">
+            <span style="font-size: 14pt;"><b>
+            <span style="font-size: 24pt;">File Drop</span></b></span>
+         </p>
+         <form  action="http://172.30.1.18:9000/test" method="post" enctype="multipart/form-data" name="uploadForm" id="uploadForm" >
+            <table class="table" width="100%" border="1px">
+               <tbody id="fileTableTbody">
+                  <tr>
+                     <td id="dropZone">파일을 드래그 하세요</td>
+                     
+                  </tr>
+                  
+               </tbody>
+               
+            </table>
+                     <input multiple="multiple" type="file" name="file[]"   ><br>
 							<%=a %>
 							<input type= hidden value="<%=a %>" name="wordvoca">
 							<input type= hidden value="<%=info.getIdnum() %>" name = userinfo>
 							<input type="submit" value="업로드" id="uploadBtn" > 
-			</form>
-				
-				
-				<!-- <a href="#" onclick="uploadFile(); return false;" class="btn bg_01" id="uploadBtn">파일 업로드</a> -->
-				
-			 <a href="Study.jsp">
-				<div style=" cursor: pointer; background-color: #DDDDDD; text-align: center; padding-bottom: 10px; padding-top: 10px;" onClick="close_pop();">
-					<span class="pop_bt" style="font-size: 13pt;"> 닫기 </span>
-				</div>
-			</a>
-		</div>
+         </form>
+            
+            
+            <!-- <a href="#" onclick="uploadFile(); return false;" class="btn bg_01" id="uploadBtn">파일 업로드</a> -->
+            			
+          
+      </div>
+   </div>
+   
+   <script type="text/javascript">
 
-
-
-		
-<!-- <form action="http://172.30.1.18:9000/tt" method="post" enctype="multipart/form-data">
-         <input type="file" name="file">
-         <input type="submit">
-
-      </form> -->
-
-
-
-
-	</div>
-	<script type="text/javascript">
-      
         jQuery(document).ready(function() {
                 $('#file').show();
         }); 
@@ -351,4 +351,3 @@ text-align: center;
 
 </BODY>
 </HTML>
-

@@ -71,7 +71,8 @@ public class Receivemfcc extends HttpServlet {
       // EducationDTO dto = new EducationDTO(result, resultUK, resultUS, record,
       // word1);
 
-      // VODVOCA테이블에서 VOCANUM 가져오기
+
+	
 
 //      System.out.println(Arrays.toString(word_arr));
       VocaDAO vocadao = new VocaDAO();
@@ -112,6 +113,7 @@ public class Receivemfcc extends HttpServlet {
       // int id_num = id_dto.getIdnum();
       
       //int id_num = 1; // 일단 임의로 설정
+
 
       // YNDRECORD 추가
       RecordDAO recorddao = new RecordDAO();
