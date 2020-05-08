@@ -1,3 +1,4 @@
+<%@page import="model.MemberDTO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
    pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
@@ -107,9 +108,14 @@ text-align: center;
 </head>
 
 <BODY>
+<<<<<<< HEAD
    <script src="http://code.jquery.com/jquery-latest.js"></script>
 
    <script type="text/javascript">
+=======
+	
+<% MemberDTO info = (MemberDTO)session.getAttribute("info"); %>
+>>>>>>> branch 'master' of https://github.com/2019-SMHRD-Deep3/doback_Web.git
 
 
    
@@ -295,6 +301,7 @@ text-align: center;
         }
     }
 </script>
+<<<<<<< HEAD
    <div id="file" class="modal">
    
       <div class="modal-content">
@@ -319,21 +326,22 @@ text-align: center;
                </tbody>
                
             </table>
-                     <input multiple="multiple" type="file" name="file[]" ><br>
-                     
-                     <input type= hidden value="<%=a %>" name="wordvoca"> 
-                     <tr><input type="submit" value="업로드" id="uploadBtn"></tr>
+                     <input multiple="multiple" type="file" name="file[]"   ><br>
+							<%=a %>
+							<input type= hidden value="<%=a %>" name="wordvoca">
+							<input type= hidden value="<%=info.getIdnum() %>" name = userinfo>
+							<input type="submit" value="업로드" id="uploadBtn" > 
          </form>
             
             
             <!-- <a href="#" onclick="uploadFile(); return false;" class="btn bg_01" id="uploadBtn">파일 업로드</a> -->
-            
+            			
           
       </div>
    </div>
    
    <script type="text/javascript">
-      
+
         jQuery(document).ready(function() {
                 $('#file').show();
         }); 

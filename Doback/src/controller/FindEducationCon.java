@@ -13,9 +13,10 @@ public class FindEducationCon implements Icommand {
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
 		String moveURL = null;
-		int edunum = Integer.parseInt(request.getParameter("deunum"));
+		int idnum = Integer.parseInt(request.getParameter("idnum"));
+		int edunum = Integer.parseInt(request.getParameter("edunum"));
 		
-		EducationDTO dto = new EducationDTO(edunum);
+		EducationDTO dto = new EducationDTO(idnum, edunum);
 		EducationDAO dao = EducationDAO.getDAO();
 		EducationDTO info = dao.findEducation(dto);
 		

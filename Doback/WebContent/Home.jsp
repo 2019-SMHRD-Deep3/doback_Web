@@ -1,3 +1,4 @@
+<%@page import="model.MemberDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -24,6 +25,7 @@
 <link rel="stylesheet" href="bower_components/animate.css/animate.min.css">
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+<!-- <script src="js/vendor/jquery-1.11.2.min.js"></script> -->
 
 
 <style>
@@ -138,6 +140,10 @@ div .row > .typed-cursor  {
 </head>
 
 <body id="top">
+<%
+
+
+%>
 	<!--[if lt IE 8]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->

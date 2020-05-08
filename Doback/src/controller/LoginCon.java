@@ -31,6 +31,7 @@ public class LoginCon implements Icommand {
 		if(info != null) {
 			HttpSession session = request.getSession();
 			session.setAttribute("info", info);
+			//session.setAttribute("idnum", info.getIdnum());
 			System.out.println("로그인 성공");
 		}else {
 			System.out.println("로그인 실패");

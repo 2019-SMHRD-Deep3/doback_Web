@@ -1,3 +1,4 @@
+<%@page import="model.MemberDTO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
@@ -78,7 +79,9 @@ header a.MyStudy {
               String b="thick";
               String c="chic";
               String d="she wears thick and chic shoes eventhough she is sick";
-              String e="i can see many trees thick with leaves around the park"; %>
+              String e="i can see many trees thick with leaves around the park";
+              MemberDTO info = (MemberDTO)session.getAttribute("info");
+              %>
     <!--[if lt IE 8]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -117,7 +120,7 @@ header a.MyStudy {
         <div class="container">
             <div class="col-md-12 text-center">
                 <h2>
-                  녹음한 파일을 올려주세요 
+                  <%=info.getIdnum() %>녹음한 파일을 올려주세요 
                 </h2>
                 <p>Please put on your voice record!</p>
 						<a href="File.jsp?word=<%=a%>,<%=b%>,<%=c%>,<%=d%>,<%=e%>"

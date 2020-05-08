@@ -19,6 +19,7 @@ import controller.InsertRecordCon;
 import controller.InsertWordCon;
 import controller.JoinCon;
 import controller.LoginCon;
+import controller.LogoutCon;
 
 @WebServlet("*.do")
 public class FrontController extends HttpServlet {
@@ -37,7 +38,7 @@ public class FrontController extends HttpServlet {
 		map.put("FindRecord.do", new FindRecordCon());
 		map.put("InsertWord.do", new InsertWordCon());
 		map.put("FindWord.do", new FindWordCon());
-		
+		map.put("LogoutService.do", new LogoutCon());
 		
 	}
 	
