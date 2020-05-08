@@ -64,8 +64,8 @@ public class EducationDAO {
 			psmt.setInt(6, dto.getAllsim());
 			psmt.setInt(7, dto.getUk());
 			psmt.setInt(8, dto.getUs());
-			psmt.setInt(9, dto.getRecordnum());
-			psmt.setInt(10, dto.getIdnum());
+			psmt.setInt(10, dto.getRecordnum());
+			psmt.setInt(9, dto.getIdnum());
 			cnt = psmt.executeUpdate();
 
 		} catch (SQLException e) {
@@ -80,6 +80,7 @@ public class EducationDAO {
 		EducationDTO info = null;
 		ArrayList<EducationDTO> arr = new ArrayList<EducationDTO>();
 		
+		int f_edunum;
 		int f_word1;
 		int f_word2;
 		int f_word3;
@@ -99,9 +100,10 @@ public class EducationDAO {
 			rs = psmt.executeQuery();
 			
 			while(rs.next()) {
+				f_edunum = rs.getInt("edunum");
 				f_word1 = rs.getInt("word1");
 				f_word2 = rs.getInt("word2");
-				f_word3 = rs.getInt("ord3");
+				f_word3 = rs.getInt("word3");
 				f_sentence1 = rs.getInt("sentence1");
 				f_sentence2 = rs.getInt("sentence2");
 				f_allsim = rs.getInt("allsim");
@@ -111,7 +113,7 @@ public class EducationDAO {
 				f_idnum = rs.getInt("idnum");
 				
 				
-				info = new EducationDTO(f_word1, f_word2, f_word3, f_sentence1, f_sentence2,
+				info = new EducationDTO(f_edunum, f_word1, f_word2, f_word3, f_sentence1, f_sentence2,
 						f_allsim, f_uk, f_us, f_recordnum,f_idnum);
 				arr.add(info);
 			}
