@@ -101,7 +101,7 @@ public class EducationDAO {
 			while(rs.next()) {
 				f_word1 = rs.getInt("word1");
 				f_word2 = rs.getInt("word2");
-				f_word3 = rs.getInt("ord3");
+				f_word3 = rs.getInt("word3");
 				f_sentence1 = rs.getInt("sentence1");
 				f_sentence2 = rs.getInt("sentence2");
 				f_allsim = rs.getInt("allsim");
@@ -141,6 +141,7 @@ public class EducationDAO {
 			psmt.setInt(8, us);
 			psmt.setInt(10, recordnum);
 			psmt.setInt(9, idnum);
+
 			cnt = psmt.executeUpdate();
 
 		} catch (SQLException e) {

@@ -30,6 +30,7 @@ CREATE TABLE MEMBER(
 	CONSTRAINT MEMBER_PK123 PRIMARY KEY (IDNUM)
 	)
 	
+	
 CREATE TABLE YNDvoca(
 	vocaNUM NUMBER NOT NULL,
 	voca VARCHAR2(1000 BYTE) NOT NULL,
@@ -92,6 +93,8 @@ INSERT INTO YNDVOCA VALUES (VOC_SEQ.nextval,'i can see many trees thick with lea
 insert into yndrecord values (999,'sick',1,sysdate,1)
 
 delete from YNDVOCA;
+
+
 
 SELECT * FROM MEMBER
 SELECT * FROM YNDEDUCATION

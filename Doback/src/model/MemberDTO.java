@@ -40,7 +40,11 @@ public class MemberDTO {
 		this.tel = tel;
 	}
 
-
+	public MemberDTO(int idnum) {//회원정보수정
+		super();
+		this.idnum = idnum;
+		
+	}
 	public int getIdnum() {
 		return idnum;
 	}

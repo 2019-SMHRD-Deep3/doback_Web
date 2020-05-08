@@ -301,7 +301,6 @@ text-align: center;
         }
     }
 </script>
-<<<<<<< HEAD
    <div id="file" class="modal">
    
       <div class="modal-content">

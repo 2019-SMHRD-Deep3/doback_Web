@@ -169,7 +169,8 @@ div .row > .typed-cursor  {
 								<!-- <li><a href="#assets" class="btn-white btn-small"
 									style="padding-right: 19px; padding-left: 19px;">야너두 소개</a></li> -->
 								<!-- <li><a href="#assets">나의 강의실</a></li>
-                                <li><a href="#blog">Blog</a></li>
+                                <li><a hre
+                                f="#blog">Blog</a></li>
                                 <li><a href="#download">Download</a></li> -->
 							</ul>
 							<ul class="member-actions" style="padding-top: 19px;">
