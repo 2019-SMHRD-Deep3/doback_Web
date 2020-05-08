@@ -44,15 +44,15 @@ public class Receivemfcc extends HttpServlet {
 
 		
 		 String result =
-		  "12.761704742908478,52.093658834695816,51.001744747161865,12.81673955917358,62.49960207939148,";
+		  "27,28,79,37,92";
 		  String resultUK =
-		  "2.601749822497368,99.9747097492218,99.99576807022095,1.5991542488336563,1.5164146199822426,";
+		  "14,48,28,14,37";
 		  String resultUS =
-		  "97.39824533462524,0.025291391648352146,0.004226776218274608,98.40084314346313,98.48358035087585,";
+		  "86,52,72,86,63";
 		  String record =
 		  "./recorddata/511.wav,./recorddata/5112.wav,./recorddata/5113.wav,./recorddata/Bridget.wav,./recorddata/japan.wav,";
 		  String word1 =
-		  "sick,thick,chic,she wear thick and chic shoes eventhough she is sick,i can see many trees thick with leaves around the park"
+		  "sick,thick,chic,she wears thick and chic shoes eventhough she is sick,i can see many trees thick with leaves around the park"
 		  ;
 		 
 		String[] result_arr = result.split(",");
@@ -106,7 +106,7 @@ public class Receivemfcc extends HttpServlet {
 		// 아이디 넘버 가져오기
 		 HttpSession session = request.getSession();
 		 MemberDTO id_dto = (MemberDTO) session.getAttribute("info");
-		// int id_num = id_dto.getIdnum();
+		//int id_num = id_dto.getIdnum();
 
 		int id_num = 1; // 일단 임의로 설정
 

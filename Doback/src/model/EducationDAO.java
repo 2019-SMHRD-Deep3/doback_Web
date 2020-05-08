@@ -139,8 +139,8 @@ public class EducationDAO {
 			psmt.setInt(6, allstm);
 			psmt.setInt(7, uk);
 			psmt.setInt(8, us);
-			psmt.setInt(9, recordnum);
-			psmt.setInt(10, idnum);
+			psmt.setInt(10, recordnum);
+			psmt.setInt(9, idnum);
 			cnt = psmt.executeUpdate();
 
 		} catch (SQLException e) {
