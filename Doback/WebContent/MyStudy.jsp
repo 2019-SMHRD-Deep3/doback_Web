@@ -90,6 +90,7 @@ table {
 	<!--[if lt IE 8]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
+
 	<%
 		//dao객체 호출
 		//dao안에서 select관련 메소드 생성
@@ -118,6 +119,7 @@ table {
 							<ul class="primary-nav">
 								<!-- <li><a href="#assets" class="btn-white btn-small" style=padding-right:19px;padding-left:19px;>소개</a></li> -->
 								<!-- <li><a href="#assets">나의 강의실</a></li>
+
                                 <li><a href="#blog">Blog</a></li>
                                 <li><a href="#download">Download</a></li> -->
 							</ul>
