@@ -1,3 +1,4 @@
+<%@page import="model.MemberDTO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
@@ -100,7 +101,7 @@ text-align: center;
 
 <BODY>
 	
-
+<% MemberDTO info = (MemberDTO)session.getAttribute("info"); %>
 
 	<script src="http://code.jquery.com/jquery-latest.js"></script>
 
@@ -308,7 +309,7 @@ text-align: center;
 							<input multiple="multiple" type="file" name="file[]"   ><br>
 							<%=a %>
 							<input type= hidden value="<%=a %>" name="wordvoca">
-
+							<input type= hidden value="<%=info.getIdnum() %>" name = userinfo>
 							<input type="submit" value="¾÷·Îµå" id="uploadBtn" > 
 			</form>
 				
