@@ -31,13 +31,14 @@
 <style>
 header a.Join {
 	margin-right: 20px;
+	font-size:17px;
 }
 
 header a.login {
 	margin-right: 20px;
+	font-size:17px;
 }
-header {
-   
+header { 
     padding:0px !important; 
 }
 
@@ -68,11 +69,12 @@ header {
 	padding-bottom: 150px;
 }
 #assets2{
-background-color: #EBF5FF;
+background-color:#F0E9EB;
 }
 #usuk{
 font-size: 50px;
-margin-bottom:150px;
+margin-top:auto;
+margin-bottom:100px;
 }
 #commu{
 margin-right:200px;
@@ -87,6 +89,31 @@ margin-right:300px;
 #title{
 padding-top:250px;
 }
+#btn_1{
+background-color:
+}
+.btn{
+background-color: #ff5274;
+ color: white;
+  border: solid 0px;
+}
+.btn:hover{
+background-color: #ffff;
+    color: #ff5274;
+    border: solid 0px;
+}
+#typing{
+color:black;
+font-weight:bold;
+font-size:50px;
+}
+#usuk{
+color:black;
+font-weight:bold;
+font-size:50px;
+}
+
+
 
 
 /* div .typed {
@@ -161,22 +188,13 @@ div .row > .typed-cursor  {
 			<header >
 				<div class="header-content">
 					<div class="logo">
-						<a href="Home.jsp" ><img src="logo5.png" alt="Sedna logo" border="3px" width="160px" height="120px"></a>
+						<a href="Home.jsp" ><img src="logo5.png" alt="Sedna logo" border="3px" width="100px" height="100px"></a>
 					</div>
 					<div class="header-nav">
-						<nav>
-							<ul class="primary-nav">
-								<!-- <li><a href="#assets" class="btn-white btn-small"
-									style="padding-right: 19px; padding-left: 19px;">야너두 소개</a></li> -->
-								<!-- <li><a href="#assets">나의 강의실</a></li>
-                                <li><a hre
-                                f="#blog">Blog</a></li>
-                                <li><a href="#download">Download</a></li> -->
-							</ul>
-							<ul class="member-actions" style="padding-top: 19px;">
+						<nav>							
+							<ul class="member-actions" >
 								<li><a href="Login.jsp" class="login">로그인</a></li>
 								<li><a href="Join.jsp" class="Join">회원가입</a></li>
-				<!-- 				<li><a href="#find_IdPw"  data-toggle="modal" data-target="#modal"  class="find_IdPw">아이디/비번찾기</a></li> -->
 							</ul>
 
 						</nav>
@@ -193,13 +211,17 @@ div .row > .typed-cursor  {
 				<div class="col-md-10 col-md-offset-1">
 					<div class="hero-content text-center" id="title">
 						<h1>딥러닝이 판단하는</h1>
-						<h1> 원어민과 나의 발음 유사도는?</h1><br>
+						<h1>원어민과 나의 영어 <span style="color:#FF5274">발음 유사도</span>는?</h1><br>
 						<p class="intro">Let's start to measure native speaker and my English pronunciation similarity service</p>
-						<a href="#" class="btn btn-accent btn-large" data-toggle="modal" data-target="#myModal" style="font-size: 20px">측정 해보기</a>
+						<a href="#" class="btn btn-accent btn-large" id="btn_1" data-toggle="modal" data-target="#myModal" style="font-size: 20px">측정 해보기</a>
 					</div>
 				</div>
 			</div>
 		</div>
+		
+		
+		
+		
 
 		<!--모달창  -->
 		   
@@ -209,11 +231,11 @@ div .row > .typed-cursor  {
       <div class="modal-content">
                 <p style="text-align: center;"><span style="font-size: 14pt;"><b><span style="font-size: 24pt;">로그인시 이용가능합니다.</span></b></span></p>
                 
-            <div style="cursor:pointer;background-color:#DDDDDD;text-align: center;padding-bottom: 30px;padding-top: 10px;" onClick="close_pop();">
-                <span class="pop_bt" style="font-size: 13pt;" >
+              <a href="Login.jsp"><div style="cursor:pointer;background-color:#DDDDDD;text-align: center;padding-bottom: 10px;padding-top: 10px;" onClick="close_pop();">
+              <span class="pop_bt" style="font-size: 13pt;" >
                      닫기
                 </span>
-            </div>
+            </div></a>
       </div>
  
     </div>
@@ -286,7 +308,7 @@ div .row > .typed-cursor  {
 					</div></td>
 							
 							<td><div class="intro-content">
-					<img src="hearing.png" alt="Sedna logo" border="3px" width="200px" height="160px"> <br><br>
+					<img src="hearing2.png" alt="Sedna logo" border="3px" width="200px" height="160px"> <br><br>
 						<h3>듣기 실력 향상</h3>
 						
 					</div></td>
@@ -329,8 +351,8 @@ div .row > .typed-cursor  {
 					</table>
 					</div>
 						<div class="down-arrowfloating-arrow"
-				style="text-align: center; font-size: 50px;">
-				<a href="#assets2"><i class="fa fa-angle-down"></i></a>
+				style="text-align: center; font-size: 50px;  margin-top:100px; margin-bottom:100px;" >
+				<a href="#"><img src="up.png" style="width:30px; height:40px;"></a>
 			</div>
 					</div>
 
@@ -340,54 +362,7 @@ div .row > .typed-cursor  {
 	
 	<!-- 섹션 3  -->
 	
-		<section class="features-extra section-padding" id="assets3">
-		<div class="container">
 
-			<div class="row" align="center">
-
-				<div class="col-md-4 intro-feature">
-
-					<div class="intro-icon">
-						<span data-icon="&#xe033;" class="icon"></span>
-					</div>
-
-					<div class="intro-content">
-						<h5>소개페이지 3</h5>
-						<p>Easily customise Sedna to suit your start up, portfolio or
-							product. Take advantage of the layered Sketch file and bring your
-							product to life.</p>
-					</div>
-
-					<div class="intro-icon">
-						<span data-icon="&#xe030;" class="icon"></span>
-					</div>
-
-					<div class="intro-content">
-						<h5>2. 이제 녹음을 합니다!</h5>
-						<p><img src="UK.png" alt="Sedna logo" border="3px" width="100px" height="80px"></p>
-					</div>
-
-					<div class="intro-icon">
-						<span data-icon="&#xe046;" class="icon"></span>
-					</div>
-
-					<div class="intro-content last">
-						<h5>3. 녹음된 파일을 화면에 올려주세요!</h5>
-						<p>Built using the latest web technologies like html5, css3,
-							and jQuery, rest assured Sedna will look smashing on every device
-							under the sun.</p>
-					</div>
-
-				</div>
-
-			</div>
-			<div class="down-arrowfloating-arrow"
-				style="text-align: center; margin-bottom: 50px; font-size: 50px;">
-				<a href="#"><i class="fa fa-angle-down"></i></a>
-			</div>
-		</div>
-
-	</section>
 	<!-- Scripts -->
 
 	<script

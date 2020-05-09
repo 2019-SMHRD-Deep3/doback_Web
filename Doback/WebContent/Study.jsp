@@ -31,10 +31,20 @@
   <style>
 header a.Study {
 	margin-right: 20px;
+	font-size:17px;
 }
 header a.MyStudy {
 	margin-right: 20px;
+	font-size:17px;
 }
+header a.Logout {
+	margin-right: 20px;
+	font-size:17px;
+}
+header { 
+    padding:0px !important; 
+}
+
 
 .hero {
 	min-height: 950px;
@@ -54,7 +64,7 @@ header a.MyStudy {
 }
 
 .hero-strip {
-	margin-top: 0px;"\
+	margin-top: 0px;
 	padding-top: 80px;
 	padding-bottom: 50px;
 }
@@ -71,6 +81,20 @@ header a.MyStudy {
 #word>h5 {
 	margin-bottom: 30px;
 }
+#warning{
+margin-top:0px;
+}
+.btn{
+background-color: #ff5274;
+ color: white;
+  border: solid 0px;
+}
+.btn:hover{
+background-color: #ffff;
+    color: #ff5274;
+    border: solid 0px;
+}
+
 </style>
 </head>
 
@@ -89,7 +113,7 @@ header a.MyStudy {
         <section class="navigation">
             <header>
                 <div class="header-content">
-                    <div class="logo"><a href="LoginSuccessHome.jsp"><img src="logo5.png" alt="Sedna logo" border="3px" width="100px" height="80px"></a></div>
+                    <div class="logo"><a href="LoginSuccessHome.jsp"><img src="logo5.png" alt="Sedna logo" border="3px" width="100px" height="100px"></a></div>
                     <div class="header-nav">
                         <nav>
                             <ul class="primary-nav">
@@ -100,7 +124,7 @@ header a.MyStudy {
 
 
                             </ul>
-                            <ul class="member-actions" style=padding-top:19px;>
+                            <ul class="member-actions">
                                 <li><a href="Study.jsp" class="Study">학습하기</a></li>
                                 <li><a href="MyStudy.jsp" class="MyStudy">나의 학습실</a></li>      
                                   <li><a href="Home.jsp" class="Logout">로그아웃</a></li>                         
@@ -116,7 +140,7 @@ header a.MyStudy {
                 
                 
             </header>
-                 <section class="hero-strip section-padding">
+                               <section class="hero-strip section-padding">
         <div class="container">
             <div class="col-md-12 text-center">
                 <h2>
@@ -140,44 +164,32 @@ header a.MyStudy {
       });
     });
 </script>
-    
-    
-    
-    
-    
-    
-    
+
     <section class="blog-intro section-padding" id="blog">
         <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h3>SECTION 1</h3>
-                    
-                   
-                </div>
-      
-            </div>
-            <div class="row">
+ 
+		
+
                 <div class="col-md-6 col-sm-12 col-xs-12 leftcol" id="word">
+                <span style="font-size:20px; font-weight: bold; color:#3D4351;float:left;">아래의 단어와 문장을 읽고 녹음해주세요.</span><br><br>   
                    <h5 class = "vocaword"><%=a %></h5>
                     <h5 class = "vocaword"><%=b %></h5>
                     <h5 class = "vocaword"><%=c %></h5>
                     <h5 class = "vocaword" ><%=d %></h5>
                     <h5 class = "vocaword"><%=e %></h5>
                 </div>
-                
-                <div class="col-md-6 col-sm-12 col-xs-12 rightcol">
-                
-                     <h3 id="warning">파일 업로드 시 주의 할 점</h3>
-                     <h5>1.파일은 반드시 ".wav" 파일로 업로드 해주세요.</h5>
-                     <h5>2.단어 하나 하나, 문장 하나 하나 세부적인 결과를 보여드리기 위해 파일 녹음을 각각 순서대로
-                        업로드 해주세요.</h5>
-                     <h5>3.정확한 측정을 위해 조용한 곳에서 녹음한 파일을 업로드 해주세요.</h5>
-                     <h5>4.틀리다고 짜증내면 신고합니다. 주의하세요!</h5>
+		
+		
+                <div class="col-md-6 col-sm-12 col-xs-12 rightcol">  
+                <span style="font-size:20px; font-weight: bold; color:#3D4351;float:left;">파일 업로드시 유의사항</span><br><br>              
+                     <h5>1.정확한 측정을 위해 소음이 적은 곳에서 녹음해주세요.</h5><br>
+                     <h5 style="width:1000px;">2.세부적인 분석을 위해 왼쪽에 나와있는 단어와 문장의 순서대로 녹음해주세요.</h5><br>
+                     <h5>3.파일은 반드시 ".wav" 파일로 업로드 해주세요.</h5><br><br><br>
                 </div>
             </div>
-        </div>
+      
     </section>
+
 
         
         

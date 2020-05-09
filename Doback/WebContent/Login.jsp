@@ -75,8 +75,7 @@ header a.login {
 		<header>
 			<div class="header-content">
 				<div class="logo">
-					<a href="Home.jsp"><img src="img/sedna-logo.png"
-						alt="Sedna logo"></a>
+					<a href="Home.jsp"></a>
 				</div>
 				<div class="header-nav">
 					<nav>
@@ -117,7 +116,8 @@ header a.login {
 							<i class="fa fa-lock"></i><input type="password" class=""
 								name="pw" placeholder="비밀번호 입력" required>
 						</div>
-						<button type="submit" class="btn-fill sign-up-btn">로그인</button>
+						<button type="submit" class="btn-fill sign-up-btn">로그인</button><br><br>
+						<a href="Join.jsp" class="Join" style="padding-left: 380px;">회원가입</a>
 					</form>
 				</div>
 			</div>
