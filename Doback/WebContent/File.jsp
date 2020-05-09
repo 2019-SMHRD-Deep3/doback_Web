@@ -32,7 +32,7 @@
 
 <style>
 body {
-	background-image: url("background.PNG");
+	background-image: url("filebackground.PNG");
 }
 header a.Study {
    margin-right: 20px;

@@ -38,9 +38,10 @@ header a.MyStudy {
 	font-size:17px;
 }
 header a.Logout {
-	margin-right: 20px;
+	
 	font-size:17px;
 }
+
 header { 
     padding:0px !important; 
 }
@@ -125,9 +126,10 @@ background-color: #ffff;
 
                             </ul>
                             <ul class="member-actions">
-                                <li><a href="Study.jsp" class="Study">학습하기</a></li>
-                                <li><a href="MyStudy.jsp" class="MyStudy">나의 학습실</a></li>      
-                                  <li><a href="Home.jsp" class="Logout">로그아웃</a></li>                         
+                                <li><a href="Study.jsp" class="Study">분석하기</a></li>   
+                                <li><a href="MyStudy.jsp" class="MyStudy">나의 분석 조회</a></li>    
+                                <li><a href="Home.jsp" class="Logout" onclick="alert('로그아웃 되었습니다.');" style="cursor:pointer">로그아웃</a></li> 
+                                                   
                                                         
                                 </ul>
                          
@@ -166,25 +168,25 @@ background-color: #ffff;
 </script>
 
     <section class="blog-intro section-padding" id="blog">
-        <div class="container">
+        <div class="container"><br><br><br><br>
  
 		
 
-                <div class="col-md-6 col-sm-12 col-xs-12 leftcol" id="word">
+                <div class="col-md-6 col-sm-12 col-xs-12 leftcol" id="word" style="padding-right:50px;">
                 <span style="font-size:20px; font-weight: bold; color:#3D4351;float:left;">아래의 단어와 문장을 읽고 녹음해주세요.</span><br><br>   
-                   <h5 class = "vocaword"><%=a %></h5>
-                    <h5 class = "vocaword"><%=b %></h5>
-                    <h5 class = "vocaword"><%=c %></h5>
-                    <h5 class = "vocaword" ><%=d %></h5>
-                    <h5 class = "vocaword"><%=e %></h5>
+                   <h5 class = "vocaword">1. <%=a %></h5>
+                    <h5 class = "vocaword">2. <%=b %></h5>
+                    <h5 class = "vocaword">3. <%=c %></h5>
+                    <h5 class = "vocaword" >4. <%=d %></h5>
+                    <h5 class = "vocaword">5. <%=e %></h5>
                 </div>
 		
 		
                 <div class="col-md-6 col-sm-12 col-xs-12 rightcol">  
                 <span style="font-size:20px; font-weight: bold; color:#3D4351;float:left;">파일 업로드시 유의사항</span><br><br>              
-                     <h5>1.정확한 측정을 위해 소음이 적은 곳에서 녹음해주세요.</h5><br>
-                     <h5 style="width:1000px;">2.세부적인 분석을 위해 왼쪽에 나와있는 단어와 문장의 순서대로 녹음해주세요.</h5><br>
-                     <h5>3.파일은 반드시 ".wav" 파일로 업로드 해주세요.</h5><br><br><br>
+                     <h5>1. 정확한 분석을 위해 소음이 적은 곳에서 녹음해주세요.</h5><br>
+                     <h5 style="width:1000px;">2. 왼쪽에 나와있는 단어와 문장의 순서대로 녹음해주세요.</h5><br>
+                     <h5>3. 파일은 반드시 ".wav" 파일로 업로드 해주세요.</h5><br><br><br>
                 </div>
             </div>
       

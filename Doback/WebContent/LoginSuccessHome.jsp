@@ -22,28 +22,32 @@
 <link rel="stylesheet" href="css/styles.css">
 <link rel="stylesheet" href="css/queries.css">
 <link rel="stylesheet" href="css/etline-font.css">
-<link rel="stylesheet" href="bower_components/animate.css/animate.min.css">
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link rel="stylesheet"
+	href="bower_components/animate.css/animate.min.css">
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 
 
 <style>
 header a.Study {
 	margin-right: 20px;
-	font-size:17px;
-}
-header a.MyStudy {
-	margin-right: 20px;
-	font-size:17px;
-}
-header a.Logout {
-	margin-right: 20px;
-	font-size:17px;
-}
-header { 
-    padding:0px !important; 
+	font-size: 17px;
 }
 
+header a.MyStudy {
+	margin-right: 20px;
+	font-size: 17px;
+}
+
+header a.Logout {
+	margin-right: 20px;
+	font-size: 17px;
+}
+
+header {
+	padding: 0px !important;
+}
 
 .hero {
 	min-height: 950px;
@@ -72,26 +76,25 @@ header {
 	padding-bottom: 150px;
 }
 
-
 .hero .hero-content {
-    padding-top: 30%;
-}
-.btn{
-background-color: #ff5274;
- color: white;
-  border: solid 0px;
-}
-.btn:hover{
-background-color: #ffff;
-    color: #ff5274;
-    border: solid 0px;
+	padding-top: 30%;
 }
 
-#upload{
-margin-right:500px;
+.btn {
+	background-color: #ff5274;
+	color: white;
+	border: solid 0px;
 }
 
+.btn:hover {
+	background-color: #ffff;
+	color: #ff5274;
+	border: solid 0px;
+}
 
+#upload {
+	margin-right: 500px;
+}
 
 /* The Modal (background) */
 .modal {
@@ -125,11 +128,12 @@ margin-right:500px;
 </head>
 
 <body id="top">
-<%MemberDTO info = (MemberDTO) session.getAttribute("info"); 
-String login_id = info.getId();
-System.out.print("로그인된 아이디:"+login_id);
-System.out.print("로그인된 회원의 번호:"+info.getIdnum());
-%> 
+	<%
+		MemberDTO info = (MemberDTO) session.getAttribute("info");
+		String login_id = info.getId();
+		System.out.print("로그인된 아이디:" + login_id);
+		System.out.print("로그인된 회원의 번호:" + info.getIdnum());
+	%>
 	<!--[if lt IE 8]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -138,75 +142,104 @@ System.out.print("로그인된 회원의 번호:"+info.getIdnum());
 			<header>
 				<div class="header-content">
 					<div class="logo">
-						<a href="Home.jsp"><img src="logo5.png" alt="Sedna logo" border="3px" width="100px" height="100px"></a>
+						<a href="Home.jsp"><img src="logo5.png" alt="Sedna logo"
+							border="3px" width="100px" height="100px"></a>
 					</div>
 					<div class="header-nav">
 						<nav>
-							
-							<ul class="member-actions" >
-								 <li><a href="Study.jsp" class="Study">학습하기</a></li>   
-                                <li><a href="MyStudy.jsp" class="MyStudy">나의 학습실</a></li>                                 
-                                <li><a href="LogoutService.do" class="Logout">로그아웃</a></li>
-			
+
+							<ul class="member-actions">
+								<li><a href="Study.jsp" class="Study">분석하기</a></li>
+								<li><a href="MyStudy.jsp" class="MyStudy">나의 분석 조회</a></li>
+								<li><a href="Home.jsp" class="Logout" onclick="alert('로그아웃 되었습니다.');" style="cursor:pointer">로그아웃</a></li>
+								
+
 							</ul>
 
 						</nav>
 					</div>
+
+<!-- 					<script>
+         $(".Logout").click(function(){
+           alert('로그아웃 되었습니다.');
+           
+         };
+    </script> -->
+
+
+
+
+
+
 					<div class="navicon">
 						<a class="nav-toggle" href="#"><span></span></a>
 					</div>
 				</div>
 			</header>
 		</section>
-		
+
 		<div class="container">
 			<div class="row">
-			
+
 				<div class="col-md-10 col-md-offset-1">
-				
-					<div class="hero-content text-center" id = "title">
-						 
-						<h1>딥러닝이 판단하는</h1>
-						<h1>원어민과 <span style="color:#FF5274"><%=info.getId() %>님</span>의<span style="color:#FF5274"> 발음유사도</span></h1>
-						<h1>지금 바로 측정해보세요!</h1><br><br>
-						<a href="Study.jsp" class="btn btn-accent btn-large" style="font-size: 20px">측정 해보기</a>
+
+					<div class="hero-content text-center" id="title">
+
+						<br> <br> <br> <br>
+						<h1>음성인식기술을 활용한</h1>
+						<br>
+						<h1>
+							원어민과 <span style="color: #FF5274"><%=info.getId()%>님</span>의 <span
+								style="color: #FF5274">억양 유사도</span>
+						</h1>
+						<br>
+						<h1>지금 바로 분석해보세요!</h1>
+						<br> <br> <br> <br> <a href="Study.jsp"
+							class="btn btn-accent btn-large" style="font-size: 20px">분석
+							해보기</a>
 					</div>
 				</div>
 			</div>
 		</div>
 
 		<div class="down-arrowfloating-arrow"
-			style="text-align: center; margin-top: 180px; margin-bottom:30px; font-size: 50px;">
+			style="text-align: center; margin-top: 150px; margin-bottom: 30px; font-size: 50px;">
 			<a href="#assets"><i class="fa fa-angle-down"></i></a>
 		</div>
 	</section>
 	<section class="features-extra section-padding" id="assets">
-	<div class="container">
-		<table>
+		<div class="container">
+			<table>
 				<tr>
 					<td><div class="intro-content" id="upload">
-					<img src="upload.png" alt="Sedna logo" border="3px" width="200px" height="160px" > <br><br><br><br>
-						<h2 style="font-weight: bold;">녹음한 파일 업로드</h2><br>
-						<h3>완벽한 분석을 위해 조용하고 </h3>
-						<h3>소음이 적은 곳에서 녹음을 해주세요:)</h3>	<br><br><br><br>
-						
-					</div></td>
+							<img src="upload.png" alt="Sedna logo" border="3px" width="200px"
+								height="160px"> <br> <br> <br> <br>
+							<h2 style="font-weight: bold;">녹음한 파일 업로드</h2>
+							<br>
+							<h3>완벽한 분석을 위해 조용하고</h3>
+							<h3>소음이 적은 곳에서 녹음을 해주세요:)</h3>
+							<br> <br> <br> <br>
+
+						</div></td>
 
 					<td><div class="intro-content" id="ana">
-					<img src="speak.png" alt="Sedna logo" border="3px" width="200px" height="180px"> <br><br><br><br>
-						<h2  style="font-weight: bold;">내발음은?</h2><br>
-						<h3 style="width:5000px;">딥러닝으로 분석한 나의 발음을</h3>
-						<h3>차트와 표로 분석결과를 깔끔하게 보여줍니다!</h3> <br><br><br><br>
-						
-					</div></td>
-				</tr>
-		</table>
-							
+							<img src="speak.png" alt="Sedna logo" border="3px" width="200px"
+								height="180px"> <br> <br> <br>
+							<h2 style="font-weight: bold;">나의 영어 억양은?</h2>
+							<br>
+							<h3 style="width: 5000px;">딥러닝으로 분석한 나의 억양을</h3>
+							<h3>차트와 표로 분석결과를 깔끔하게 보여줍니다!</h3>
+							<br> <br> <br> <br>
 
-		
+						</div></td>
+				</tr>
+			</table>
+
+
+
 			<div class="down-arrowfloating-arrow"
 				style="text-align: center; margin-bottom: 50px; font-size: 50px;">
-				<a href="#"><img src="up.png" style="width:30px; height:40px;"></a>
+				<a href="#"><img src="up.png" style="width: 30px; height: 40px;"></a>
 			</div>
 		</div>
 
@@ -216,20 +249,21 @@ System.out.print("로그인된 회원의 번호:"+info.getIdnum());
 
 	<script
 		src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-		
+
 	<script>
 window.jQuery
 				|| document
 						.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
 	</script>
-	
+
 	<script src="bower_components/retina.js/dist/retina.js"></script>
 	<script src="js/jquery.fancybox.pack.js"></script>
 	<script src="js/vendor/bootstrap.min.js"></script>
 	<script src="js/scripts.js"></script>
 	<script src="js/jquery.flexslider-min.js"></script>
 	<script src="bower_components/classie/classie.js"></script>
-	<script src="bower_components/jquery-waypoints/lib/jquery.waypoints.min.js"></script>
+	<script
+		src="bower_components/jquery-waypoints/lib/jquery.waypoints.min.js"></script>
 
 
 

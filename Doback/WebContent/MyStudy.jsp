@@ -45,11 +45,19 @@ defs + rect{
 
 <style>
 header a.Study {
-   margin-right: 20px;
+	margin-right: 20px;
+	font-size:17px;
 }
-
 header a.MyStudy {
-   margin-right: 20px;
+	margin-right: 20px;
+	font-size:17px;
+}
+header a.Logout {
+
+	font-size:17px;
+}
+header { 
+    padding:0px !important; 
 }
 
 .hero {
@@ -123,10 +131,7 @@ table {
       <section class="navigation">
          <header>
             <div class="header-content">
-               <div class="logo">
-                  <a href="LoginSuccessHome.jsp"><img src="img/sedna-logo.png"
-                     alt="Sedna logo"></a>
-               </div>
+               <div class="logo"><a href="LoginSuccessHome.jsp"><img src="logo5.png" alt="Sedna logo" border="3px" width="100px" height="100px"></a></div>
                <div class="header-nav">
                   <nav>
                      <ul class="primary-nav">
@@ -136,10 +141,11 @@ table {
                                 <li><a href="#blog">Blog</a></li>
                                 <li><a href="#download">Download</a></li> -->
                      </ul>
-                     <ul class="member-actions" style="padding-top: 19px;">
-                        <li><a href="Study.jsp" class="Study">학습하기</a></li>
-                        <li><a href="MyStudy.jsp" class="MyStudy">나의 학습실</a></li>
-                        <li><a href="Home.jsp" class="Logout">로그아웃</a></li>
+                     <ul class="member-actions" >
+                   <li><a href="Study.jsp" class="Study">분석하기</a></li>   
+                                <li><a href="MyStudy.jsp" class="MyStudy">나의 분석 조회</a></li>    
+                              <li><a href="Home.jsp" class="Logout" onclick="alert('로그아웃 되었습니다.');" style="cursor:pointer">로그아웃</a></li>     
+                      
 
                      </ul>
 

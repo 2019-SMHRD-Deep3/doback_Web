@@ -77,10 +77,11 @@ margin-top:auto;
 margin-bottom:100px;
 }
 #commu{
-margin-right:200px;
+margin-right:300px;
 }
+
 #speaking{
-margin-right:200px;
+margin-right:250px;
 }
 
 #US{
@@ -210,10 +211,10 @@ div .row > .typed-cursor  {
 			<div class="row">
 				<div class="col-md-10 col-md-offset-1">
 					<div class="hero-content text-center" id="title">
-						<h1>딥러닝이 판단하는</h1>
-						<h1>원어민과 나의 영어 <span style="color:#FF5274">발음 유사도</span>는?</h1><br>
-						<p class="intro">Let's start to measure native speaker and my English pronunciation similarity service</p>
-						<a href="#" class="btn btn-accent btn-large" id="btn_1" data-toggle="modal" data-target="#myModal" style="font-size: 20px">측정 해보기</a>
+						<br><h1>음성인식기술을 활용한</h1><br><br>
+						<h1>원어민과 나의 영어 <span style="color:#FF5274">억양 유사도</span>는?</h1><br><br>
+						<p class="intro">Let's start to measure native speaker and my English accent similarity service</p><br><br><br>
+						<a href="#" class="btn btn-accent btn-large" id="btn_1" data-toggle="modal" data-target="#myModal" style="font-size: 20px">분석 해보기</a>
 					</div>
 				</div>
 			</div>
@@ -226,7 +227,7 @@ div .row > .typed-cursor  {
 		<!--모달창  -->
 		   
  
-      <!--로그인 이용 모달창 -->s
+      <!--로그인 이용 모달창 -->
        <div id="myModal" class="modal">
       <div class="modal-content">
                 <p style="text-align: center;"><span style="font-size: 14pt;"><b><span style="font-size: 24pt;">로그인시 이용가능합니다.</span></b></span></p>
@@ -259,7 +260,7 @@ div .row > .typed-cursor  {
 	
 
 		<div class="down-arrowfloating-arrow"
-			style="text-align: center; margin-top: 100px; font-size: 50px;">
+			style="text-align: center; margin-top: 120px; font-size: 50px;">
 			<a href="#assets"><i class="fa fa-angle-down"></i></a>
 		</div>
 		
@@ -277,7 +278,7 @@ div .row > .typed-cursor  {
 			<div class="row" align="center">
 					<h1 id="typing"></h1>
 					<script>
-					var x = "당신의 발음은 원어민과 얼마나 유사할까요?" 
+					var x = "당신의 억양은 원어민과 얼마나 유사할까요?" 
 				    var i =0;
 					function typeWriter(){
 						if(i < x.length){
@@ -288,7 +289,7 @@ div .row > .typed-cursor  {
 					}typeWriter();
 					</script><br>
 				
-						<h3>왜 영어 발음이 중요할까요?</h3> <br><br><br><br>
+						<h3>왜 영어 억양이 중요할까요?</h3> <br><br><br><br>
 						
 
 <table>
@@ -307,8 +308,8 @@ div .row > .typed-cursor  {
 						
 					</div></td>
 							
-							<td><div class="intro-content">
-					<img src="hearing2.png" alt="Sedna logo" border="3px" width="200px" height="160px"> <br><br>
+							<td><div class="intro-content" id='hearing'>
+					<img src="hearing2.png" alt="Sedna logo" border="3px" width="220px" height="160px"> <br><br>
 						<h3>듣기 실력 향상</h3>
 						
 					</div></td>
@@ -333,18 +334,18 @@ div .row > .typed-cursor  {
 
 			<div class="row" align="center" style="margin-bottom: 150px; margin-top:100px;">
 
-					<h1 id="usuk">당신의 발음은 US / UK 어느 쪽에 더 가까울까요?</h1>
+					<h1 id="usuk">당신의 억양은 US / UK 어느 쪽에 더 가까울까요?</h1>
 				
 				<table>
 <tr>
 					<td><div class="intro-content" id="US">
 					<img src="US.png" alt="Sedna logo" border="3px" width="200px" height="160px" > <br><br>
-						<h3 style="margin-left: 30px">미국식 발음</h3>
+						<h3 style="margin-left: 30px">미국식 억양</h3>
 					</div></td>
 
 					<td><div class="intro-content" id="UK">
 					<img src="UK.png" alt="Sedna logo" border="3px" width="200px" height="160px"> <br><br>
-						<h3 style="margin-left: 30px">영국식 발음</h3>
+						<h3 style="margin-left: 30px">영국식 억양</h3>
 					</div></td>
 
 					</tr>
