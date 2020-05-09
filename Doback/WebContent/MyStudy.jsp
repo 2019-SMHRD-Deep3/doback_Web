@@ -14,7 +14,7 @@
 <title>Insert title here</title>
 <style>
 defs + rect{
-	fill : #f3f4f8
+   fill : #f3f4f8
 }
 
 </style>
@@ -119,19 +119,19 @@ table {
    %>
 
 
-	<section class="hero">
-		<section class="navigation">
-			<header>
-				<div class="header-content">
-					<div class="logo">
-						<a href="LoginSuccessHome.jsp"><img src="img/sedna-logo.png"
-							alt="Sedna logo"></a>
-					</div>
-					<div class="header-nav">
-						<nav>
-							<ul class="primary-nav">
-								<!-- <li><a href="#assets" class="btn-white btn-small" style=padding-right:19px;padding-left:19px;>소개</a></li> -->
-								<!-- <li><a href="#assets">나의 강의실</a></li>
+   <section class="hero">
+      <section class="navigation">
+         <header>
+            <div class="header-content">
+               <div class="logo">
+                  <a href="LoginSuccessHome.jsp"><img src="img/sedna-logo.png"
+                     alt="Sedna logo"></a>
+               </div>
+               <div class="header-nav">
+                  <nav>
+                     <ul class="primary-nav">
+                        <!-- <li><a href="#assets" class="btn-white btn-small" style=padding-right:19px;padding-left:19px;>소개</a></li> -->
+                        <!-- <li><a href="#assets">나의 강의실</a></li>
 
                                 <li><a href="#blog">Blog</a></li>
                                 <li><a href="#download">Download</a></li> -->
@@ -167,7 +167,7 @@ table {
 									<br>
 									<br>
 									<br>
-									<h1 style="color: #FF1744;" id = "simtext" style = "text-size : 70px)"></h1>
+									<h1 style="color: #FF1744;" id = "simtext" style = "text-size : 70px"></h1>
 									<br>
 									<br>
 									<br>
@@ -221,7 +221,7 @@ table {
                      %>
                   </table>
                   
-		</div>
+      </div>
          </section>
 
 
@@ -231,7 +231,7 @@ table {
    
    <script type="text/javascript">
    function print(v){
-	   document.getElementById('simtext').innerHTML=v+"%";
+      document.getElementById('simtext').innerHTML=v+"%";
    }
    </script>
    
@@ -274,13 +274,13 @@ table {
                
                // 구글 차트
                google.charts.load('current', {
-            	  'packages':['corechart']
+                 'packages':['corechart']
               }); 
-        	google.charts.setOnLoadCallback(drawChart2);
-        	function drawChart2() {
-            	var data = new google.visualization.DataTable();
-            	data.addColumn('string','국가');
-            	data.addColumn('number','비율');
+           google.charts.setOnLoadCallback(drawChart2);
+           function drawChart2() {
+               var data = new google.visualization.DataTable();
+               data.addColumn('string','국가');
+               data.addColumn('number','비율');
  
             data.addRows([ 
                 ['영국',parseInt(uk)],
@@ -291,9 +291,8 @@ table {
                     'width':300,
                     'height':300,
                     pieSliceText:'label',
-                    legend:'none'
+                    legend:'none' 
             };
-            
             var chart = new google.visualization.PieChart(document.getElementById('columnchart_values'));
             chart.draw(data,opt);
         }

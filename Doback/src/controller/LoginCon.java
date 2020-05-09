@@ -33,17 +33,11 @@ public class LoginCon implements Icommand {
 			session.setAttribute("info", info);
 			//session.setAttribute("idnum", info.getIdnum());
 			System.out.println("로그인 성공");
+			moveURL = "LoginSuccessHome.jsp";
 		}else {
 			System.out.println("로그인 실패");
-		}
-		if(info == null) {
-			moveURL = "Login.jsp"; //로그인 페이지 or 아이디 비번 찾기 페이지
-		}else {
-			moveURL = "LoginSuccessHome.jsp";
-		}
-		
-		
-		
+			moveURL = "Login.jsp";
+		}		
 		return moveURL;
 	}
 

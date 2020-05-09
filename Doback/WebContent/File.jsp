@@ -32,7 +32,7 @@
 
 <style>
 body {
-	background-image: url("filebackground.PNG");
+	background-image: url("background.PNG");
 }
 header a.Study {
    margin-right: 20px;
@@ -97,11 +97,17 @@ header a.Study {
 }
 #uploadBtn{
 text-align: center;
+width:30%;
+margin-left:180px;
  }
  
   .pop_bt{
  background: url("close.png"") no-repeat 0 0.25em; white-space:nowrap;margin-left:500px;	
  }
+ 
+ /* 버튼 꾸미기 */
+  
+
 
 
 </style>
@@ -311,22 +317,22 @@ text-align: center;
             <span style="font-size: 14pt;"><b>
             <span style="font-size: 24pt;">File Drop</span></b></span>
          </p>
-         <form  action="http://172.30.1.5:9000/test" method="post" enctype="multipart/form-data" name="uploadForm" id="uploadForm" >
-            <table class="table" width="100%" border="1px">
+
+         <form  action="http://172.30.1.18:9000/test" method="post" enctype="multipart/form-data" name="uploadForm" id="uploadForm" >
+            <!-- <table class="table" width="100%" border="1px">
+>>>>>>> branch 'master' of https://github.com/2019-SMHRD-Deep3/doback_Web.git
                <tbody id="fileTableTbody">
                   <tr>
-                     <td id="dropZone">파일을 드래그 하세요</td>
-                     
+                     <td id="dropZone">파일을 드래그 하세요</td>       
                   </tr>
-                  
-               </tbody>
-               
-            </table>
+               </tbody>  
+            </table> -->
                      <input multiple="multiple" type="file" name="file[]"   ><br>
-							<%=a %>
+							
 							<input type= hidden value="<%=a %>" name="wordvoca">
 							<input type= hidden value="<%=info.getIdnum() %>" name = userinfo>
 							<input type="submit" value="업로드" id="uploadBtn" > 
+							
          </form>
             
             

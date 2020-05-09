@@ -89,8 +89,7 @@ input[type=radio]{-webkit-box-sizing:border-box;
 		<header>
 			<div class="header-content">
 				<div class="logo">
-					<a href="Home.jsp"><img src="img/sedna-logo.png"
-						alt="Sedna logo"></a>
+					<a href="Home.jsp"></a>
 				</div>
 				<div class="header-nav">
 					<nav>
@@ -104,7 +103,7 @@ input[type=radio]{-webkit-box-sizing:border-box;
 						<ul class="member-actions" style="padding-top: 19px;">
 							<li><a href="Login.jsp" class="login">로그인</a></li>
 							<li><a href="Join.jsp" class="Join">회원가입</a></li>
-							<li><a href="#find_IdPw" class="find_IdPw">아이디/비번찾기</a></li>
+							
 						</ul>
 
 					</nav>
@@ -124,7 +123,7 @@ input[type=radio]{-webkit-box-sizing:border-box;
 						Welcome:)
 						</h3>
 
-							<p>야!너두 에 오신걸 환영합니다.</p>
+							<p>야! 너두 에 오신걸 환영합니다.</p>
 
 							<form class="signup-form" action="JoinService.do" method="POST" role="form">
 								
@@ -148,8 +147,8 @@ input[type=radio]{-webkit-box-sizing:border-box;
 								<div class="form-input-group" >
 									<i class="fa fa-lock"></i>
 									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-									<input type="radio" name="gender" value="man" checked id="gender_check">남&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-									<input type="radio"	name="gender" value="woman" checked id="gender_check">여
+									<input type="radio" name="gender" value="man"  id="gender_check">남&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<input type="radio"	name="gender" value="woman"  id="gender_check">여
 								</div>
 								<button type="submit" class="btn-fill sign-up-btn">회원가입</button>
 							</form>

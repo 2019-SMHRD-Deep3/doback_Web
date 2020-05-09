@@ -30,10 +30,20 @@
 <style>
 header a.Study {
 	margin-right: 20px;
+	font-size:17px;
 }
 header a.MyStudy {
 	margin-right: 20px;
+	font-size:17px;
 }
+header a.Logout {
+	margin-right: 20px;
+	font-size:17px;
+}
+header { 
+    padding:0px !important; 
+}
+
 
 .hero {
 	min-height: 950px;
@@ -61,6 +71,27 @@ header a.MyStudy {
 	padding-top: 50px;
 	padding-bottom: 150px;
 }
+
+
+.hero .hero-content {
+    padding-top: 30%;
+}
+.btn{
+background-color: #ff5274;
+ color: white;
+  border: solid 0px;
+}
+.btn:hover{
+background-color: #ffff;
+    color: #ff5274;
+    border: solid 0px;
+}
+
+#upload{
+margin-right:500px;
+}
+
+
 
 /* The Modal (background) */
 .modal {
@@ -95,9 +126,10 @@ header a.MyStudy {
 
 <body id="top">
 <%MemberDTO info = (MemberDTO) session.getAttribute("info"); 
-//String idnum = (String)session.getAttribute("idnum");
-session.setAttribute("idnum", info.getIdnum());
-%>
+String login_id = info.getId();
+System.out.print("로그인된 아이디:"+login_id);
+System.out.print("로그인된 회원의 번호:"+info.getIdnum());
+%> 
 	<!--[if lt IE 8]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -106,23 +138,16 @@ session.setAttribute("idnum", info.getIdnum());
 			<header>
 				<div class="header-content">
 					<div class="logo">
-						<a href="Home.jsp"><img src="img/sedna-logo.png"
-							alt="Sedna logo"></a>
+						<a href="Home.jsp"><img src="logo5.png" alt="Sedna logo" border="3px" width="100px" height="100px"></a>
 					</div>
 					<div class="header-nav">
 						<nav>
-							<ul class="primary-nav">
-								<!-- <li><a href="#assets" class="btn-white btn-small"
-									style="padding-right: 19px; padding-left: 19px;">야너두 소개</a></li> --> -->
-								<!-- <li><a href="#assets">나의 강의실</a></li>
-                                <li><a href="#blog">Blog</a></li>
-                                <li><a href="#download">Download</a></li> -->
-							</ul>
-							<ul class="member-actions" style="padding-top: 19px;">
+							
+							<ul class="member-actions" >
 								 <li><a href="Study.jsp" class="Study">학습하기</a></li>   
                                 <li><a href="MyStudy.jsp" class="MyStudy">나의 학습실</a></li>                                 
                                 <li><a href="LogoutService.do" class="Logout">로그아웃</a></li>
-				<!-- 				<li><a href="#find_IdPw"  data-toggle="modal" data-target="#modal"  class="find_IdPw">아이디/비번찾기</a></li> -->
+			
 							</ul>
 
 						</nav>
@@ -136,161 +161,52 @@ session.setAttribute("idnum", info.getIdnum());
 		
 		<div class="container">
 			<div class="row">
+			
 				<div class="col-md-10 col-md-offset-1">
+				
 					<div class="hero-content text-center" id = "title">
-						 <h1><%=info.getIdnum() %>님 환영합니다!</h1>
-						<h1>원어민과의 영어 발음 유사도 측정서비스</h1>
-						<p class="intro">Let's start to measure your English pronounce with us.</p>
-						<a href="Study.jsp" class="btn btn-accent btn-large">측정 해보기</a>
-						
-						
+						 
+						<h1>딥러닝이 판단하는</h1>
+						<h1>원어민과 <span style="color:#FF5274"><%=info.getId() %>님</span>의<span style="color:#FF5274"> 발음유사도</span></h1>
+						<h1>지금 바로 측정해보세요!</h1><br><br>
+						<a href="Study.jsp" class="btn btn-accent btn-large" style="font-size: 20px">측정 해보기</a>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<!--모달창  -->
-		<!--로그인 모달  -->
-		<!--  <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content modal-popup">
-				<a href="#" class="close-link"><i class="icon_close_alt2"></i></a>
-				<h3 class="white">로그인</h3>
-				<form action="" class="popup-form">
-					<input type="text" class="form-control form-white" placeholder="아이디 입력">
-					<input type="text" class="form-control form-white" placeholder="비밀번호 입력">
-					
-					<div class="checkbox-holder text-left">
-						<div class="checkbox">
-							<input type="checkbox" value="None" id="squaredOne" name="check" />
-							<label for="squaredOne"><span>I Agree to the <strong>Terms &amp; Conditions</strong></span></label>
-						</div>
-					</div>
-					<button type="submit" class="btn btn-submit">Submit</button>
-				</form>
-			</div>
-		</div>
-		</div>
-		회원가입 모달 
-		<div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content modal-popup">
-				<a href="#" class="close-link"><i class="icon_close_alt2"></i></a>
-				<h3 class="white">회원가입</h3>
-				<form action="" class="popup-form">
-					<input type="text" class="form-control form-white" placeholder="아이디 입력">
-					<input type="text" class="form-control form-white" placeholder="비밀번호 입력">
-					<input type="text" class="form-control form-white" placeholder="아메일 입력">
-					<input type="text" class="form-control form-white" placeholder="전화번호 입력">
-					<input type="text" class="form-control form-white" placeholder="성별">
-					<div class="dropdown">
-						<button id="dLabel" class="form-control form-white dropdown" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							Pricing Plan
-						</button>
-						<ul class="dropdown-menu animated fadeIn" role="menu" aria-labelledby="dLabel">
-							<li class="animated lightSpeedIn"><a href="#">1 month membership ($150)</a></li>
-							<li class="animated lightSpeedIn"><a href="#">3 month membership ($350)</a></li>
-							<li class="animated lightSpeedIn"><a href="#">1 year membership ($1000)</a></li>
-							<li class="animated lightSpeedIn"><a href="#">Free trial class</a></li>
-						</ul>
-					</div>
-					<div class="checkbox-holder text-left">
-						<div class="checkbox">
-							<input type="checkbox" value="None" id="squaredOne" name="check" />
-							<label for="squaredOne"><span>I Agree to the <strong>Terms &amp; Conditions</strong></span></label>
-						</div>
-					</div>
-					<button type="submit" class="btn btn-submit">Submit</button>
-				</form>
-			</div>
-		</div>
-		</div>
-		 -->
-		 <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content modal-popup">
-				<a href="#" class="close-link"><i class="icon_close_alt2"></i></a>
-				<h3 class="white">아이디/비번 찾기</h3>
-				<form action="" class="popup-form">
-					<input type="text" class="form-control form-white" placeholder="아이디 입력">
-					<input type="text" class="form-control form-white" placeholder="비밀번호 입력">
-					<input type="text" class="form-control form-white" placeholder="아메일 입력">
-					<input type="text" class="form-control form-white" placeholder="전화번호 입력">
-					<input type="text" class="form-control form-white" placeholder="성별">
-					<div class="dropdown">
-						<button id="dLabel" class="form-control form-white dropdown" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							Pricing Plan
-						</button>
-						<ul class="dropdown-menu animated fadeIn" role="menu" aria-labelledby="dLabel">
-							<li class="animated lightSpeedIn"><a href="#">1 month membership ($150)</a></li>
-							<li class="animated lightSpeedIn"><a href="#">3 month membership ($350)</a></li>
-							<li class="animated lightSpeedIn"><a href="#">1 year membership ($1000)</a></li>
-							<li class="animated lightSpeedIn"><a href="#">Free trial class</a></li>
-						</ul>
-					</div>
-					<div class="checkbox-holder text-left">
-						<div class="checkbox">
-							<input type="checkbox" value="None" id="squaredOne" name="check" />
-							<label for="squaredOne"><span>I Agree to the <strong>Terms &amp; Conditions</strong></span></label>
-						</div>
-					</div>
-					<button type="submit" class="btn btn-submit">Submit</button>
-				</form>
-			</div>
-		</div>
-		</div>
-		<!--모달창 여기까지  -->
-
 		<div class="down-arrowfloating-arrow"
-			style="text-align: center; margin-top: 150px; font-size: 50px;">
+			style="text-align: center; margin-top: 180px; margin-bottom:30px; font-size: 50px;">
 			<a href="#assets"><i class="fa fa-angle-down"></i></a>
 		</div>
 	</section>
 	<section class="features-extra section-padding" id="assets">
-		<div class="container">
+	<div class="container">
+		<table>
+				<tr>
+					<td><div class="intro-content" id="upload">
+					<img src="upload.png" alt="Sedna logo" border="3px" width="200px" height="160px" > <br><br><br><br>
+						<h2 style="font-weight: bold;">녹음한 파일 업로드</h2><br>
+						<h3>완벽한 분석을 위해 조용하고 </h3>
+						<h3>소음이 적은 곳에서 녹음을 해주세요:)</h3>	<br><br><br><br>
+						
+					</div></td>
 
-			<div class="row" align="center">
+					<td><div class="intro-content" id="ana">
+					<img src="speak.png" alt="Sedna logo" border="3px" width="200px" height="180px"> <br><br><br><br>
+						<h2  style="font-weight: bold;">내발음은?</h2><br>
+						<h3 style="width:5000px;">딥러닝으로 분석한 나의 발음을</h3>
+						<h3>차트와 표로 분석결과를 깔끔하게 보여줍니다!</h3> <br><br><br><br>
+						
+					</div></td>
+				</tr>
+		</table>
+							
 
-				<div class="col-md-4 intro-feature">
-
-					<div class="intro-icon">
-						<span data-icon="&#xe033;" class="icon"></span>
-					</div>
-
-					<div class="intro-content">
-						<h5>1. 화면의 단어와 문장을 보고 한 번 따라해보세요!</h5>
-						<p>Easily customise Sedna to suit your start up, portfolio or
-							product. Take advantage of the layered Sketch file and bring your
-							product to life.</p>
-					</div>
-
-					<div class="intro-icon">
-						<span data-icon="&#xe030;" class="icon"></span>
-					</div>
-
-					<div class="intro-content">
-						<h5>2. 이제 녹음을 합니다!</h5>
-						<p>Designed with modern trends and techniques in mind, Sedna
-							will help your product stand out in an already saturated market.</p>
-					</div>
-
-					<div class="intro-icon">
-						<span data-icon="&#xe046;" class="icon"></span>
-					</div>
-
-					<div class="intro-content last">
-						<h5>3. 녹음된 파일을 화면에 올려주세요!</h5>
-						<p>Built using the latest web technologies like html5, css3,
-							and jQuery, rest assured Sedna will look smashing on every device
-							under the sun.</p>
-					</div>
-
-				</div>
-
-			</div>
+		
 			<div class="down-arrowfloating-arrow"
 				style="text-align: center; margin-bottom: 50px; font-size: 50px;">
-				<a href="#"><i class="fa fa-angle-down"></i></a>
+				<a href="#"><img src="up.png" style="width:30px; height:40px;"></a>
 			</div>
 		</div>
 
