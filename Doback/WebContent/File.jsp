@@ -311,7 +311,7 @@ text-align: center;
             <span style="font-size: 14pt;"><b>
             <span style="font-size: 24pt;">File Drop</span></b></span>
          </p>
-         <form  action="http://172.30.1.18:9000/test" method="post" enctype="multipart/form-data" name="uploadForm" id="uploadForm" >
+         <form  action="http://172.30.1.5:9000/test" method="post" enctype="multipart/form-data" name="uploadForm" id="uploadForm" >
             <table class="table" width="100%" border="1px">
                <tbody id="fileTableTbody">
                   <tr>

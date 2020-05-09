@@ -61,38 +61,22 @@ public class Receivemfcc extends HttpServlet {
       String[] record_arr = record.split(",");
       String[] word_arr = word1.split(",");
       String[] arr = new String[5];
-//      
-//      System.out.println(result_arr[0]);
-//      System.out.println(result_arr[1]);
-//      System.out.println(result_arr[2]);
-//      System.out.println(result_arr[3]);
-//      System.out.println(result_arr[4]);
+//		System.out.println(result_arr[0]);
+//		System.out.println(result_arr[1]);
+//		System.out.println(result_arr[2]);
+//		System.out.println(result_arr[3]);
+//		System.out.println(result_arr[4]);
 
-      // EducationDTO dto = new EducationDTO(result, resultUK, resultUS, record,
-      // word1);
+		// EducationDTO dto = new EducationDTO(result, resultUK, resultUS, record,
+		// word1);
 
-
-	
-
-//      System.out.println(Arrays.toString(word_arr));
-      VocaDAO vocadao = new VocaDAO();
-      int vocanum0 = vocadao.findVocaNum(word_arr[0]);
-      int vocanum1 = vocadao.findVocaNum(word_arr[1]);
-      int vocanum2 = vocadao.findVocaNum(word_arr[2]);
-      int vocanum3 = vocadao.findVocaNum(word_arr[3]);
-      int vocanum4 = vocadao.findVocaNum(word_arr[4]);
-//   System.out.println(word_arr[0]);
-//   System.out.println(word_arr[1]);
-//   System.out.println(word_arr[2]);
-//   System.out.println(word_arr[3]);
-//   System.out.println(word_arr[4]);
-//      
-//      System.out.println(word1);
-//      System.out.println("0--"+vocanum0);
-//      System.out.println("1--"+vocanum1);
-//      System.out.println("2--"+vocanum2);
-//      System.out.println("3--"+vocanum3);
-//      System.out.println("4--"+vocanum4);
+		// VODVOCA테이블에서 VOCANUM 가져오기
+		VocaDAO vocadao = new VocaDAO();
+		int vocanum0 = vocadao.findVocaNum(word_arr[0]);
+		int vocanum1 = vocadao.findVocaNum(word_arr[1]);
+		int vocanum2 = vocadao.findVocaNum(word_arr[2]);
+		int vocanum3 = vocadao.findVocaNum(word_arr[3]);
+		int vocanum4 = vocadao.findVocaNum(word_arr[4]);
 
       // 각각의 유사도
       double word_change1 = Double.parseDouble(result_arr[0]);
@@ -107,16 +91,11 @@ public class Receivemfcc extends HttpServlet {
 //     System.out.println(word_change4);
 //     System.out.println(word_change5);
 
-      // 아이디 넘버 가져오기
-       
-       MemberDTO id_dto = (MemberDTO) session.getAttribute("info");
-      // int id_num = id_dto.getIdnum();
-      
-      //int id_num = 1; // 일단 임의로 설정
-
-
-      // YNDRECORD 추가
-      RecordDAO recorddao = new RecordDAO();
+		// 아이디 넘버 가져오기
+		 
+		 MemberDTO id_dto = (MemberDTO) session.getAttribute("info");
+		// YNDRECORD 추가
+		RecordDAO recorddao = new RecordDAO();
         //System.out.println("레코드 삽입 : "+record_arr[0]+"/"+vocanum0+"/"+id_num);
         
       cnt = recorddao.insert(record_arr[0], vocanum0, id_num);
@@ -136,35 +115,45 @@ public class Receivemfcc extends HttpServlet {
       int recordnum2 = recorddao.select(record_arr[2]);
       int recordnum3 = recorddao.select(record_arr[3]);
       int recordnum4 = recorddao.select(record_arr[4]);
-   
+		/*
+		 * cnt = recorddao.insert(record_arr[0], vocanum0, id_num); //to_string("레코드0",
+		 * cnt); cnt = recorddao.insert(record_arr[1], vocanum1, id_num);
+		 * //to_string("레코드1", cnt); cnt = recorddao.insert(record_arr[2], vocanum2,
+		 * id_num); //to_string("레코드2", cnt); cnt = recorddao.insert(record_arr[3],
+		 * vocanum3, id_num); //to_string("레코드3", cnt); cnt =
+		 * recorddao.insert(record_arr[4], vocanum4, id_num); //to_string("레코드4", cnt);
+		 */
+		// YNDRECORD RECORDNUM select
 
       // YNDEDUCATION insert
       EducationDAO educationdao = new EducationDAO();
 
-      double result_sum = word_change1 + word_change2 + word_change3 + word_change4 + word_change5;
-      int result_mean = (int)(result_sum / 5);
-      int resultUK_mean = (int)((Double.parseDouble(resultUK_arr[0]) + Double.parseDouble(resultUK_arr[1])
-            + Double.parseDouble(resultUK_arr[2]) + Double.parseDouble(resultUK_arr[3])
-            + Double.parseDouble(resultUK_arr[4])) / 5);
-      int resultUS_mean = (int)((Double.parseDouble(resultUS_arr[0]) + Double.parseDouble(resultUS_arr[1])
-            + Double.parseDouble(resultUS_arr[2]) + Double.parseDouble(resultUS_arr[3])
-            + Double.parseDouble(resultUS_arr[4])) / 5);
-      cnt = educationdao.insertdata((int)word_change1, (int)word_change2,
-            (int)word_change3, (int)word_change4, (int)word_change5,
-            result_mean, resultUK_mean, resultUS_mean, recordnum0, id_num);
-      //to_string("최종 유사도 삽입",cnt);
-      
-      /*
-       * HttpSession session = request.getSession(); session.setAttribute("sick",
-       * recordnum0 ); session.setAttribute("thick", recordnum1 );
-       * session.setAttribute("chic", recordnum2 ); session.setAttribute("Sen1",
-       * recordnum3 ); session.setAttribute("Sen2", recordnum4 );
-       * session.setAttribute("mean", result_mean ); session.setAttribute("UK",
-       * resultUK_mean ); session.setAttribute("US", resultUS_mean );
-       */
-      System.out.println("cnt : "+cnt);
-      response.sendRedirect("MyStudy.jsp");
-   }
+		double result_sum = word_change1 + word_change2 + word_change3 + word_change4 + word_change5;
+		int result_mean = (int)(result_sum / 5);
+		int resultUK_mean = (int)((Double.parseDouble(resultUK_arr[0]) + Double.parseDouble(resultUK_arr[1])
+				+ Double.parseDouble(resultUK_arr[2]) + Double.parseDouble(resultUK_arr[3])
+				+ Double.parseDouble(resultUK_arr[4])) / 5);
+		int resultUS_mean = (int)((Double.parseDouble(resultUS_arr[0]) + Double.parseDouble(resultUS_arr[1])
+				+ Double.parseDouble(resultUS_arr[2]) + Double.parseDouble(resultUS_arr[3])
+				+ Double.parseDouble(resultUS_arr[4])) / 5);
+		
+		  cnt = educationdao.insertdata((int)word_change1, (int)word_change2,
+		 (int)word_change3, (int)word_change4, (int)word_change5, result_mean,
+		  resultUK_mean, resultUS_mean, recordnum0, id_num);
+		 
+		 		
+		/*
+		 * HttpSession session = request.getSession(); session.setAttribute("sick",
+		 * recordnum0 ); session.setAttribute("thick", recordnum1 );
+		 * session.setAttribute("chic", recordnum2 ); session.setAttribute("Sen1",
+		 * recordnum3 ); session.setAttribute("Sen2", recordnum4 );
+		 * session.setAttribute("mean", result_mean ); session.setAttribute("UK",
+		 * resultUK_mean ); session.setAttribute("US", resultUS_mean );
+		 */
+		/* System.out.println("cnt : "+cnt); */
+		to_string("최종 유사도 삽입",cnt);
+		response.sendRedirect("MyStudy.jsp");
+	}
 
    public void to_string(String word, int cnt) {
       if (cnt > 0) {

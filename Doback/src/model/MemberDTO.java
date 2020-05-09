@@ -53,6 +53,7 @@ public class MemberDTO {
       this.idnum = idnum;
    }
 
+
    public String getId() {
       return id;
    }

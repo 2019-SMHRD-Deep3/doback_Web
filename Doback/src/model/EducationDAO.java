@@ -143,6 +143,7 @@ public class EducationDAO {
 			psmt.setInt(8, us);
 			psmt.setInt(10, recordnum);
 			psmt.setInt(9, idnum);
+
 			cnt = psmt.executeUpdate();
 
 		} catch (SQLException e) {

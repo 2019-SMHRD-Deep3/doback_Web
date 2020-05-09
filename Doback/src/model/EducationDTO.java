@@ -12,7 +12,7 @@ public class EducationDTO {
 	private int us;
 	private int recordnum;
 	private int idnum;
-	
+	private int sysdate;
 	
 	
 	public EducationDTO() {
@@ -28,10 +28,12 @@ public class EducationDTO {
 	}
 
 
-	public void setIdnum(int idnum) {
-		this.idnum = idnum;
-	}
+	
 
+	public void setSysdate(int sysdate) {
+		this.sysdate = sysdate;
+	}
+	
 
 	public EducationDTO(int edunum, int word1, int word2, int word3, int sentence1, int sentence2, int allsim, int uk,
 			int us, int recordnum, int idnum) {
@@ -47,6 +49,7 @@ public class EducationDTO {
 		this.us = us;
 		this.recordnum = recordnum;
 		this.idnum = idnum;
+		
 	}
 
 

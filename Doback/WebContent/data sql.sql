@@ -74,6 +74,8 @@ INSERT INTO YNDVOCA VALUES (VOC_SEQ.NEXTVAL,'chic')
 INSERT INTO YNDVOCA VALUES (VOC_SEQ.NEXTVAL,'she wears thick and chic shoes eventhough she is sick')
 INSERT INTO YNDVOCA VALUES (VOC_SEQ.NEXTVAL,'i can see many trees thick with leaves around the park')
 
+
+
 SELECT * FROM MEMBER
 SELECT * FROM YNDEDUCATION
 SELECT * FROM YNDRECORD

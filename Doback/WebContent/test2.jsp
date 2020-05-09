@@ -160,16 +160,11 @@ table {
                   <br>
                   			<div style = "margin-right: 50px">
 								<div class="row" style="display: inline-block;">
-								<br>
-									<br>
-									<h4><%=mdto.getId()%>님은 유사도는 ?
-									</h4>
+									<h4><%=mdto.getId()%>님은 유사도는 ?</h4>
 									<br>
 									<br>
 									<br>
-									<h1 style="color: #FF1744;" id = "simtext" style = "text-size : 70px)"></h1>
-									<br>
-									<br>
+									<h1 style="color: #FF1744;"></h1>
 									<br>
 									<br>
 							</div>

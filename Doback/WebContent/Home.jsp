@@ -36,6 +36,10 @@ header a.Join {
 header a.login {
 	margin-right: 20px;
 }
+header {
+   
+    padding:0px !important; 
+}
 
 .hero {
 	min-height: 950px;
@@ -68,6 +72,7 @@ background-color: #EBF5FF;
 }
 #usuk{
 font-size: 50px;
+margin-bottom:150px;
 }
 #commu{
 margin-right:200px;
@@ -75,8 +80,12 @@ margin-right:200px;
 #speaking{
 margin-right:200px;
 }
+
 #US{
 margin-right:300px;
+}
+#title{
+padding-top:250px;
 }
 
 
@@ -148,11 +157,11 @@ div .row > .typed-cursor  {
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 	<section class="hero">
-		<section class="navigation">
-			<header>
+		<section class="navigation" style="">
+			<header >
 				<div class="header-content">
 					<div class="logo">
-						<a href="Home.jsp"><img src="logo5.png" alt="Sedna logo" border="3px" width="100px" height="80px"></a>
+						<a href="Home.jsp" ><img src="logo5.png" alt="Sedna logo" border="3px" width="160px" height="120px"></a>
 					</div>
 					<div class="header-nav">
 						<nav>
@@ -160,7 +169,8 @@ div .row > .typed-cursor  {
 								<!-- <li><a href="#assets" class="btn-white btn-small"
 									style="padding-right: 19px; padding-left: 19px;">야너두 소개</a></li> -->
 								<!-- <li><a href="#assets">나의 강의실</a></li>
-                                <li><a href="#blog">Blog</a></li>
+                                <li><a hre
+                                f="#blog">Blog</a></li>
                                 <li><a href="#download">Download</a></li> -->
 							</ul>
 							<ul class="member-actions" style="padding-top: 19px;">
@@ -182,9 +192,10 @@ div .row > .typed-cursor  {
 			<div class="row">
 				<div class="col-md-10 col-md-offset-1">
 					<div class="hero-content text-center" id="title">
-						<h1>원어민과의 영어 발음 유사도 측정서비스</h1><br>
-						<p class="intro">Let's start to measure your English pronounce with us.</p>
-						<a href="#" class="btn btn-accent btn-large" data-toggle="modal" data-target="#myModal">측정 해보기</a>
+						<h1>딥러닝이 판단하는</h1>
+						<h1> 원어민과 나의 발음 유사도는?</h1><br>
+						<p class="intro">Let's start to measure native speaker and my English pronunciation similarity service</p>
+						<a href="#" class="btn btn-accent btn-large" data-toggle="modal" data-target="#myModal" style="font-size: 20px">측정 해보기</a>
 					</div>
 				</div>
 			</div>
@@ -193,12 +204,12 @@ div .row > .typed-cursor  {
 		<!--모달창  -->
 		   
  
-      <!--로그인 이용 모달창 -->
+      <!--로그인 이용 모달창 -->s
        <div id="myModal" class="modal">
       <div class="modal-content">
                 <p style="text-align: center;"><span style="font-size: 14pt;"><b><span style="font-size: 24pt;">로그인시 이용가능합니다.</span></b></span></p>
                 
-            <div style="cursor:pointer;background-color:#DDDDDD;text-align: center;padding-bottom: 10px;padding-top: 10px;" onClick="close_pop();">
+            <div style="cursor:pointer;background-color:#DDDDDD;text-align: center;padding-bottom: 30px;padding-top: 10px;" onClick="close_pop();">
                 <span class="pop_bt" style="font-size: 13pt;" >
                      닫기
                 </span>
@@ -226,7 +237,7 @@ div .row > .typed-cursor  {
 	
 
 		<div class="down-arrowfloating-arrow"
-			style="text-align: center; margin-top: 150px; font-size: 50px;">
+			style="text-align: center; margin-top: 100px; font-size: 50px;">
 			<a href="#assets"><i class="fa fa-angle-down"></i></a>
 		</div>
 		
@@ -298,24 +309,29 @@ div .row > .typed-cursor  {
 		<section class="features-extra section-padding" id="assets2">
 		<div class="container">
 
-			<div class="row" align="center">
+			<div class="row" align="center" style="margin-bottom: 150px; margin-top:100px;">
 
-					<h1 id="usuk" >당신의 발음은 US / UK 어느 쪽에 더 가까울까요?</h1>
+					<h1 id="usuk">당신의 발음은 US / UK 어느 쪽에 더 가까울까요?</h1>
+				
 				<table>
 <tr>
 					<td><div class="intro-content" id="US">
 					<img src="US.png" alt="Sedna logo" border="3px" width="200px" height="160px" > <br><br>
-						<h3>미국 발음</h3>
+						<h3 style="margin-left: 30px">미국식 발음</h3>
 					</div></td>
 
 					<td><div class="intro-content" id="UK">
 					<img src="UK.png" alt="Sedna logo" border="3px" width="200px" height="160px"> <br><br>
-						<h3>영국 발음</h3>
+						<h3 style="margin-left: 30px">영국식 발음</h3>
 					</div></td>
 
 					</tr>
 					</table>
 					</div>
+						<div class="down-arrowfloating-arrow"
+				style="text-align: center; font-size: 50px;">
+				<a href="#assets2"><i class="fa fa-angle-down"></i></a>
+			</div>
 					</div>
 
 	</section>
