@@ -177,10 +177,13 @@ table {
                     <div id="columnchart_values2" style="display:inline-block; "></div>
                   </div>
                </div>
+                <div style = "font-size : 40px; color : black; position: relative; text-align : center;" >세부 유사도</div>
                <div style="width:100%; height:200px; overflow:auto">
+                
                   <table id="example-table-1" width="100%"
                      class="table table-bordered table-hover text-center">
                      <thead>
+                     
                         <tr>
                            <th>날짜</th>
                            <th>sick</th>
@@ -288,8 +291,9 @@ table {
                     'width':300,
                     'height':300,
                     pieSliceText:'label',
-                    legend:'none' 
+                    legend:'none'
             };
+            
             var chart = new google.visualization.PieChart(document.getElementById('columnchart_values'));
             chart.draw(data,opt);
         }
@@ -306,9 +310,9 @@ table {
                    var data = google.visualization.arrayToDataTable([
                          [ "Element", "Density", {
                             role : "style"} ],
-                          [ "sick", parseInt(word1), "red" ],[ "thick", parseInt(word2), "orange" ],
-                          [ "chic", parseInt(word3), "yellow" ],[ "문장1", parseInt(sentence1), "green" ],
-                          [ "문장2", parseInt(sentence2), "blue" ] ]);
+                          [ "sick", parseInt(word1), "#D50000" ],[ "thick", parseInt(word2), "#FFA000" ],
+                          [ "chic", parseInt(word3), "#FFFF00" ],[ "문장1", parseInt(sentence1), "#76FF03" ],
+                          [ "문장2", parseInt(sentence2), "#2196F3" ] ]);
 
                    var view = new google.visualization.DataView(data);
                    view.setColumns([ 0, 1, {
@@ -325,7 +329,7 @@ table {
                       width : 500,
                       height : 300,
                       bar : {
-                         groupWidth : "95%"
+                         groupWidth : "90%"
                       },
                       legend : {
                          position : "none"
